@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown__toggle {
+	@include flex(row, center, center, 4px);
+	color: inherit;
+	cursor: pointer;
+	@include text-style(14px, 400, 16px);
+}
+
+.dropdown__toggle .chev {
+	@include transition;
+}
+
+.dropdown__menu {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	background: $white;
+	border: 1px solid $grey;
+	border-radius: 8px;
+	min-width: 100%;
+	border: 1px solid rgba(119, 160, 71, 0.2);
+	z-index: 10;
+	overflow: hidden;
+}
+.dropdown__menu.lang {
+	top: 40px;
+}
+
+.dropdown.open .dropdown__menu {
+	display: block;
+}
+
+.dropdown.open .dropdown__toggle img {
+	transform: rotate(180deg);
+}
+.dropdown__menu-list {
+	width: 100%;
+	@include flex(column, flex-start, flex-start);
+}
+.dropdown__menu-item {
+	width: 100%;
+	@include flex(row, center, center);
+	@include text-style(14px, 400, 16px);
+	@include transition;
+	@media (max-width: 767px) {
+		@include text-style(18px, 400, 20px);
+	}
+	&:hover {
+		background-color: $bg;
+	}
+	& > a {
+		display: block;
+		@include box(100%);
+		padding: 8px;
+	}
+}

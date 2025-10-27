@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	font-style: normal;
+	font-family: 'Cera Pro', sans-serif;
+	background: $bg;
+	color: $black;
+}
+
+button {
+	cursor: pointer;
+}
