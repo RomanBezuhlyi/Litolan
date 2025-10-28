@@ -210,8 +210,9 @@
 
 		.mark {
 			position: absolute;
-			top: 8px;
-			right: 8px;
+			top: 5px;
+			right: 5px;
+			background: transparent;
 		}
 	}
 
@@ -235,6 +236,7 @@
 			position: absolute;
 			top: -2px;
 			right: -4px;
+			background: transparent;
 		}
 	}
 }
@@ -271,7 +273,8 @@
 .header-mobile-menu {
 	display: none;
 	@media (max-width: 767px) {
-		position: relative;
+		position: absolute;
+		top: 110px;
 		width: 100%;
 		@include flex(column, center, center, 20px);
 		background-color: $white;
@@ -353,6 +356,7 @@ body.menu-open {
 		border-radius: 8px;
 		padding: 8px;
 		z-index: 111;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 	}
 
 	&__list {

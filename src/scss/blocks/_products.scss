@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.products {
+	padding: 40px 0;
+	margin: 8px 0;
+	@media (max-width: 767px) {
+		padding: 20px 0;
+	}
+
+	&__title {
+		@include text-style(36px, 500, 44px, center);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 26px, center);
+			margin-bottom: 12px;
+		}
+	}
+
+	&__card {
+		position: relative;
+		@include flex(column, flex-end, center);
+		height: 100%;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+	}
+
+	&__card-body {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 8px);
+		padding: 20px;
+		@media (max-width: 767px) {
+			padding: 12px;
+		}
+	}
+
+	&__card-title {
+		@include text-style(24px, 500, 28px);
+		@media (max-width: 767px) {
+			@include text-style(18px, 500, 20px);
+		}
+	}
+
+	&__card-text {
+		color: $grey;
+		@include text-style(16px, 500, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 500, 16px);
+		}
+	}
+
+	&__btn {
+		margin-top: 8px;
+		color: $white;
+		width: 100%;
+		@include center;
+		@include text-style(16px, 500, 20px, center);
+		padding: 12px 24px;
+		border-radius: 8px;
+		background: $yellow;
+		@media (max-width: 767px) {
+			padding: 8px 12px;
+		}
+	}
+}

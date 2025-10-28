@@ -1,0 +1,162 @@
+@use '../abstracts' as *;
+
+.catalog {
+	padding: 40px 0;
+	margin: 8px 0;
+	@media (max-width: 767px) {
+		padding: 20px 0;
+	}
+
+	&__title {
+		@include text-style(36px, 500, 44px, center);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 26px, center);
+			margin-bottom: 12px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 8px;
+
+		@media (max-width: 1399px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@media (max-width: 1199px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: 575px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__card {
+		position: relative;
+		@include flex(column, center, flex-start);
+		padding: 12px;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+	}
+
+	&__marks {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		.like {
+			margin-bottom: 12px;
+		}
+		.action {
+			color: $white;
+			@include text-style(11px, 500, 12px, center);
+			border-radius: 200px;
+			background: $red;
+			padding: 2px 6px;
+		}
+		.new {
+			margin-top: 2px;
+			color: $white;
+			@include text-style(11px, 500, 12px, center);
+			border-radius: 200px;
+			background: $green;
+			padding: 2px 6px;
+		}
+	}
+
+	&__card-img {
+		margin: auto;
+	}
+
+	&__card-tag {
+		overflow: hidden;
+		color: $grey;
+		text-overflow: ellipsis;
+		@include text-style(12px, 400, 14px, center);
+		padding: 5px 10px;
+		border-radius: 40px;
+		border: 1px solid $bg;
+		background: $white;
+		margin-bottom: 20px;
+	}
+
+	&__card-title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@include text-style(16px, 400, 20px);
+		margin-bottom: 4px;
+	}
+
+	&__card-review {
+		@include flex(row, flex-start, center, 4px);
+		margin-bottom: 12px;
+		img {
+			@include box(16px);
+		}
+		p {
+			@include text-style(12px, 400, 14px);
+		}
+		a {
+			color: $grey;
+			@include text-style(12px, 400, 14px);
+		}
+	}
+
+	&__card-price {
+		width: 100%;
+		@include flex(row, space-between, center, 8px);
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $bg;
+		.price {
+			@include flex(row, flex-start, center, 8px);
+		}
+		.new {
+			color: $red;
+			@include text-style(16px, 500, 20px);
+		}
+		.old {
+			color: $grey;
+			@include text-style(14px, 400, 16px);
+			text-decoration-line: line-through;
+		}
+		.current {
+			@include text-style(16px, 500, 20px);
+		}
+		.cart {
+			position: relative;
+			@include box(24px);
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -9px;
+				width: 1px;
+				height: 16px;
+				background: #d9d9d9;
+			}
+		}
+	}
+	&__btn {
+		margin-top: 8px;
+		color: $white;
+		width: 100%;
+		@include center;
+		@include text-style(16px, 500, 20px, center);
+		padding: 12px 24px;
+		border-radius: 8px;
+		background: $yellow;
+		@media (max-width: 767px) {
+			padding: 8px 12px;
+		}
+	}
+}

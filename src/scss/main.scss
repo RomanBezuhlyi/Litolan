@@ -5,4 +5,9 @@
 @use './base/components' as *;
 
 @use './blocks/header' as *;
+@use './blocks/hero' as *;
+@use './blocks/products' as *;
+@use './blocks/catalog' as *;
+@use './blocks/reviews' as *;
+@use './blocks/about-us' as *;
 @use './blocks/footer' as *;

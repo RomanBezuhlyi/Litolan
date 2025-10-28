@@ -1,0 +1,155 @@
+@use '../abstracts' as *;
+
+.about {
+	margin: 8px 0;
+	padding: 80px 0;
+	@media (max-width: 767px) {
+		padding: 40px 0;
+	}
+
+	&__title {
+		@include text-style(36px, 500, 44px, center);
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, 26px, center);
+			margin-bottom: 12px;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		@include flex(row, center, flex-start, 8px);
+		@media (max-width: 1200px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content-left {
+		padding: 32px;
+		@include flex(column, flex-start, flex-start, 16px);
+		@include text-style(16px, 400, 20px);
+		width: 40%;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		ul {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+		@media (max-width: 1200px) {
+			width: 100%;
+		}
+		@media (max-width: 767px) {
+			padding: 20px;
+		}
+	}
+
+	&__content-right {
+		width: 60%;
+		@include flex(column, center, flex-start, 8px);
+		@media (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+	&__content-video {
+		position: relative;
+		@include box(100%, 388px, 12px);
+		overflow: hidden;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		@media (max-width: 767px) {
+			height: 300px;
+		}
+	}
+
+	&__content-panel {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 8;
+		@include flex(column, center, center, 8px);
+	}
+
+	&__content-play {
+		@include center;
+		@include box(40px, 40px, 50px);
+		padding: 12px 10px 12px 14px;
+		background: $green;
+	}
+
+	&__content-text {
+		padding: 5px 10px;
+		@include center;
+		border-radius: 40px;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		color: $white;
+		@include text-style(12px, 400, 14px);
+	}
+
+	&__content-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		object-fit: cover;
+		z-index: 7;
+	}
+
+	&__content-iframe {
+		@include box(100%);
+	}
+
+	&__content-bottom {
+		@include flex(row, flex-start, flex-start, 8px);
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content-card {
+		height: 258px;
+		@include flex(column, flex-start, flex-start, 12px);
+		padding: 20px;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: #fff7e3;
+		@media (max-width: 767px) {
+			padding: 12px;
+			height: auto;
+		}
+	}
+
+	&__content-card--tag {
+		color: $grey;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 14px;
+		@include center;
+		padding: 4px 10px 6px 10px;
+		border-radius: 40px;
+		border: 1px solid $bg;
+		background: $white;
+	}
+
+	&__content-card--title {
+		@include text-style(24px, 500, 28px);
+	}
+
+	&__content-card--text {
+		@include text-style(16px, 400, 20px);
+	}
+
+	&__content-card--list {
+		@include flex(row, flex-start, center, 40px);
+		flex-wrap: wrap;
+		row-gap: 8px;
+		@media (max-width: 767px) {
+			gap: 20px;
+		}
+	}
+
+	&__content-card--logo {
+		@include center;
+	}
+}
