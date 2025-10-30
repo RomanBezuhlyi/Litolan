@@ -16,6 +16,11 @@
 		}
 	}
 
+	&__title-small {
+		@include text-style(24px, 500, 28px);
+		margin-bottom: 8px;
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);

@@ -285,6 +285,7 @@
 		transform: translateY(-20px);
 		@include transition;
 		z-index: 10;
+		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
 	}
 
 	&__nav {
@@ -372,6 +373,196 @@ body.menu-open {
 			border-radius: 8px;
 			border: 1px solid rgba(119, 160, 71, 0.2);
 			background: $white;
+		}
+	}
+}
+
+.catalog {
+	&__menu {
+		position: absolute;
+		top: 200px;
+		left: 27%;
+		@include box(fit-content, 608px);
+		@include flex(row, flex-start, center, 2px);
+		padding: 8px;
+		border-radius: 16px;
+		background: $white;
+		box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.24);
+		z-index: 11;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-10px);
+		@include transition;
+		&.active {
+			opacity: 1;
+			pointer-events: all;
+			transform: translateY(0);
+		}
+		@media (max-width: 1200px) {
+			left: 12px;
+		}
+		@media (max-width: 991px) {
+			flex-direction: column;
+			height: auto;
+			width: 50%;
+		}
+		@media (max-width: 768px) {
+			left: 8px;
+		}
+		@media (max-width: 767px) {
+			width: calc(100% - 16px);
+			top: 100px;
+		}
+	}
+
+	&__menu-col {
+		padding: 12px;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@include flex(column, flex-start, flex-start, 8px);
+		@media (max-width: 991px) {
+			gap: 4px;
+			padding: 8px;
+		}
+		&.first {
+			@include box(288px, 100%);
+		}
+		&.second {
+			display: none;
+			@include box(288px, 100%);
+		}
+		&.third {
+			display: none;
+			@include box(340px, 100%);
+		}
+		&.fourth {
+			@include box(320px, 100%);
+			padding: 0;
+			@media (max-width: 1200px) {
+				display: none !important;
+			}
+		}
+		@media (max-width: 991px) {
+			width: 100% !important;
+		}
+	}
+
+	&__menu-item {
+		width: 100%;
+		@include flex(row, flex-start, center, 12px);
+		padding: 7px;
+		@include text-style(16px, 400, 20px);
+		border-radius: 8px;
+		border: 1px solid transparent;
+		@include transition;
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 16px);
+			gap: 8px;
+			padding: 4px;
+		}
+		&:hover {
+			border-color: rgba(0, 0, 0, 0.06);
+			background: $white;
+			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+			.second {
+				display: block;
+			}
+		}
+		&.active {
+			border-color: rgba(0, 0, 0, 0.06);
+			background: $white;
+			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+		}
+		&.second {
+			padding: 4px 12px;
+			@media (max-width: 991px) {
+				padding: 4px;
+			}
+		}
+	}
+
+	&__menu-product {
+		position: relative;
+		@include flex(column, flex-end, center);
+		@include box(100%);
+		border-radius: 12px;
+		background: #fff7e3 url(../../img/card-bg.svg) no-repeat -344px -170.224px /
+			382.904% 122.487%;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__menu-product-marks {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		@include flex(column, flex-start, flex-start, 2px);
+		.action {
+			color: $white;
+			@include text-style(11px, 500, 12px);
+			padding: 2px 6px;
+			border-radius: 200px;
+			background: $red;
+		}
+		.new {
+			color: $white;
+			@include text-style(11px, 500, 12px);
+			padding: 2px 6px;
+			border-radius: 200px;
+			background: $green;
+		}
+	}
+
+	&__menu-product--img {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include box(254px, 239px);
+		object-fit: cover;
+	}
+
+	&__menu-product--info {
+		width: 100%;
+		@include flex(column, flex-start, center);
+		padding: 16px 20px 32px 20px;
+	}
+
+	&__menu-product--title {
+		@include text-style(24px, 500, 28px, center);
+		margin-bottom: 4px;
+	}
+
+	&__menu-product--text {
+		@include text-style(16px, 400, 20px, center);
+	}
+
+	&__menu-product--panel {
+		margin-top: 12px;
+		@include flex(row, space-between, center);
+		width: 100%;
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+	}
+
+	&__menu-product--price {
+		@include text-style(16px, 400, 20px);
+	}
+
+	&__menu-product--cart {
+		position: relative;
+		@include center;
+		&:before {
+			content: '';
+			position: absolute;
+			left: -10px;
+			top: 50%;
+			transform: translateY(-50%);
+			@include box(1px, 16px);
+			background: $bg;
 		}
 	}
 }

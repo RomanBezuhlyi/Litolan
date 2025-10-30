@@ -37,9 +37,18 @@
 	}
 
 	&__menu-item {
+		width: 100%;
 		@include flex(row, flex-start, center, 12px);
 		@include text-style(16px, 400, 20px);
 		padding: 8px;
+		border-radius: 8px;
+		@include transition;
+		&:hover {
+			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+		}
+		&.active {
+			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+		}
 		@media (max-width: 767px) {
 			@include text-style(14px, 400, 16px);
 			gap: 8px;
@@ -69,6 +78,18 @@
 		@media (max-width: 480px) {
 			width: 100% !important;
 			height: 450px;
+		}
+		& > .action {
+			position: absolute;
+			top: 35%;
+			left: 8%;
+			transform: rotate(-20deg);
+			color: $white;
+			@include text-style(24px, 500, 28px, center);
+			padding: 8px 12px;
+			border-radius: 4px;
+			background: $red;
+			z-index: 2;
 		}
 	}
 

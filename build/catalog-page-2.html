@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/img/favicon-16x16.png"
+		/>
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>LITOLAN</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="header-wrapper">
+	<div class="header__banner">
+		<p class="header__banner-text">Персональные скидки для фермеров</p>
+		<button class="header__banner-close">
+			<img src="./img/close.svg" alt="" />
+		</button>
+	</div>
+	<div class="header">
+		<div class="header__top">
+			<nav class="header__top-nav">
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Информация
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
+							<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#">Доставка</a>
+				<a href="#"><img src="./img/exel.svg" alt="" />Прайс</a>
+				<a href="#">Контакты</a>
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Ru
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Ua</a></li>
+							<li class="dropdown__menu-item"><a href="#">En</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<p class="header__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
+			<div class="header__contacts">
+				<div class="header__contacts-numbers">
+					<a href="#"
+						><img class="viber" src="./img/viber.svg" alt="" /> (067) 347 75
+						41</a
+					>
+					<a href="#">(067) 451 20 31</a>
+				</div>
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Одесса
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Киев</a></li>
+							<li class="dropdown__menu-item"><a href="#">Харьков</a></li>
+							<li class="dropdown__menu-item"><a href="#">Винница</a></li>
+						</ul>
+					</div>
+				</div>
+				<button class="header__btn">
+					<img src="./img/phone.svg" alt="" /> <span>Заказать звонок</span>
+				</button>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<a class="header__bottom-left" href="#"
+				><img class="logo" src="./img/logo.svg" alt=""
+			/></a>
+			<div class="header__bottom-center">
+				<button class="header__bottom-catalog open-catalog">
+					<img src="./img/dots.svg" alt="" />
+					Каталог
+				</button>
+				<div class="header__bottom-search">
+					<img class="search" src="./img/search.svg" alt="" />
+					<input type="text" placeholder="Поиск" />
+				</div>
+			</div>
+			<div class="header__bottom-right">
+				<div class="header__bottom-currency">
+					<div class="dropdown">
+						<a href="#" class="dropdown__toggle">
+							<img src="./img/currency.svg" alt="" />
+							<img class="chev" src="./img/chev.svg" alt="" />
+						</a>
+						<div class="dropdown__menu lang">
+							<ul class="dropdown__menu-list">
+								<li class="dropdown__menu-item"><a href="#">USD</a></li>
+								<li class="dropdown__menu-item"><a href="#">UAH</a></li>
+								<li class="dropdown__menu-item"><a href="#">EUR</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<button class="header__bottom-user">
+					<img src="./img/user.svg" alt="" />
+				</button>
+				<button class="header__bottom-heart">
+					<img src="./img/heart.svg" alt="" />
+					<img class="mark" src="./img/red-dot.svg" alt="" />
+				</button>
+				<button class="header__bottom-cart">
+					<div class="header__bottom-cart--img">
+						<img class="cart" src="./img/cart.svg" alt="" />
+						<img class="mark" src="./img/red-dot.svg" alt="" />
+					</div>
+					<span>3 товара, 5 780 ₴</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile">
+		<button class="header-mobile__left open-catalog">
+			<img src="./img/dots.svg" alt="" />
+			Каталог
+		</button>
+		<a class="header-mobile__center" href="#"
+			><img src="./img/logo.svg" alt=""
+		/></a>
+		<div class="header-mobile__right">
+			<button class="header-mobile__search">
+				<img src="./img/search.svg" alt="" />
+			</button>
+			<button class="header-mobile__burger">
+				<img src="./img/burger.svg" alt="" />
+			</button>
+		</div>
+	</div>
+	<div class="header-mobile-menu">
+		<nav class="header-mobile-menu__nav">
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Информация
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
+						<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="#">Доставка</a>
+			<a href="#"><img src="./img/exel.svg" alt="" />Прайс</a>
+			<a href="#">Контакты</a>
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Ru
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Ua</a></li>
+						<li class="dropdown__menu-item"><a href="#">En</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="#"
+				><img class="viber" src="./img/viber.svg" alt="" /> (067) 347 75 41</a
+			>
+			<a href="#">(067) 451 20 31</a>
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Одесса
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Киев</a></li>
+						<li class="dropdown__menu-item"><a href="#">Харьков</a></li>
+						<li class="dropdown__menu-item"><a href="#">Винница</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="header__bottom-currency">
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					<img src="./img/currency.svg" alt="" />
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu lang">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">USD</a></li>
+						<li class="dropdown__menu-item"><a href="#">UAH</a></li>
+						<li class="dropdown__menu-item"><a href="#">EUR</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<button class="header__btn">
+			<img src="./img/phone.svg" alt="" /> <span>Заказать звонок</span>
+		</button>
+		<p class="header__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
+	</div>
+
+	<div class="header-mobile-search">
+		<input type="text" placeholder="Поиск" />
+	</div>
+</header>
+<div class="bottom-menu">
+	<ul class="bottom-menu__list">
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/user.svg" alt="" /></a>
+		</li>
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/heart.svg" alt="" /></a>
+		</li>
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/cart.svg" alt="" /></a>
+		</li>
+	</ul>
+</div>
+<div class="catalog__menu">
+	<div class="catalog__menu-col first">
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-1.svg" alt="" />
+			Пластиковые емкости
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-2.svg" alt="" />
+			Мелкая тара
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-3.svg" alt="" />
+			Канализация и водоотведение
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-4.svg" alt="" />
+			Сад огород
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-5.svg" alt="" />
+			Комплектующие для емкостей
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-6.svg" alt="" />
+			Дорожное ограждение
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-7.svg" alt="" />
+			Детская мебель и площадки
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-8.svg" alt="" />
+			Причалы и понтоны
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-9.svg" alt="" />
+			Мусорные контейнеры
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-10.svg" alt="" />
+			Разное
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-11.svg" alt="" />
+			Хиты продаж
+		</a>
+	</div>
+	<div class="catalog__menu-col second">
+		<a class="catalog__menu-item" href="#">Емкости по форме</a>
+		<a class="catalog__menu-item" href="#">Емкости по назначению</a>
+		<a class="catalog__menu-item" href="#">Трехслойные емкости</a>
+		<a class="catalog__menu-item" href="#">Емкости оптом</a>
+		<a class="catalog__menu-item" href="#">Сборные емкости</a>
+		<a class="catalog__menu-item" href="#">Бочки пластиковые</a>
+	</div>
+	<div class="catalog__menu-col third">
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-1.png" alt="" />Квадратные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-2.png" alt="" />Конусообразные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-3.png" alt="" />Вертикальные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-4.png" alt="" />Горизонтальные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-5.png" alt="" />Еврокуб</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-6.png" alt="" />Прямоугольные плоские емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-7.png" alt="" />Емкости для КАС</a
+		>
+	</div>
+	<div class="catalog__menu-col fourth">
+		<div class="catalog__menu-product">
+			<div class="catalog__menu-product-marks">
+				<p class="action">Акция</p>
+				<p class="new">Новинка</p>
+			</div>
+			<img class="catalog__menu-product--img" src="./img/slide-2.png" alt="" />
+			<div class="catalog__menu-product--info">
+				<h4 class="catalog__menu-product--title">Емкости для КАС</h4>
+				<p class="catalog__menu-product--text">5 000 литров, цена 31 999₴</p>
+				<div class="catalog__menu-product--panel">
+					<p class="catalog__menu-product--price">31 999₴</p>
+					<button class="catalog__menu-product--cart">
+						<img src="./img/cart.svg" alt="" />
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			<main>
+				<section class="assortment">
+	<div class="assortment__left">
+		<div class="assortment__menu">
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-1.svg" alt="" />
+					Пластиковые емкости
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-2.svg" alt="" />
+					Мелкая тара
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-3.svg" alt="" />
+					Канализация и водоотведение
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-4.svg" alt="" />
+					Сад огород
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-5.svg" alt="" />
+					Комплектующие для емкостей
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-6.svg" alt="" />
+					Дорожное ограждение
+				</a>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-7.svg" alt="" />
+					Детская мебель и площадки
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-8.svg" alt="" />
+					Причалы и понтоны
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-9.svg" alt="" />
+					Мусорные контейнеры
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-10.svg" alt="" />
+					Разное
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="assortment__menu-item-wrap">
+				<a class="assortment__menu-item" href="#">
+					<img src="./img/m-11.svg" alt="" />
+					Хиты продаж
+				</a>
+				<ul class="assortment__menu-item--list">
+					<li class="assortment__menu-item--item">
+						<a href="#">Квадратные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Конусообразные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Вертикальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Горизонтальные емкости</a>
+					</li>
+					<li class="assortment__menu-item--item"><a href="#">Еврокуб</a></li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Прямоугольные плоские емкости</a>
+					</li>
+					<li class="assortment__menu-item--item">
+						<a href="#">Емкости для КАС</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="assortment__menu">
+			<div class="assortment__menu-drop">
+				<div class="dropdown__head">
+					<p class="dropdown__head-name">Цвет</p>
+					<img class="dropdown__head-icon" src="./img/chev.svg" alt="" />
+				</div>
+				<div class="dropdown__body">
+					<ul class="dropdown__tabs">
+						<li class="dropdown__tab active">Синий</li>
+						<li class="dropdown__tab">Черный</li>
+						<li class="dropdown__tab">Белый</li>
+					</ul>
+				</div>
+			</div>
+			<div class="assortment__menu-drop">
+				<div class="dropdown__head">
+					<p class="dropdown__head-name">Назначение</p>
+					<img class="dropdown__head-icon" src="./img/chev.svg" alt="" />
+				</div>
+				<div class="dropdown__body">
+					<ul class="dropdown__tabs">
+						<li class="dropdown__tab">Вода</li>
+						<li class="dropdown__tab">Топливо</li>
+						<li class="dropdown__tab">Подземные</li>
+						<li class="dropdown__tab active">Строительство</li>
+						<li class="dropdown__tab">Удобрения</li>
+						<li class="dropdown__tab">Засолка</li>
+						<li class="dropdown__tab">Пищевые бочки</li>
+						<li class="dropdown__tab">Перевозка на транспорте</li>
+					</ul>
+				</div>
+			</div>
+			<div class="assortment__menu-drop">
+				<div class="dropdown__head">
+					<p class="dropdown__head-name">Форма</p>
+					<img class="dropdown__head-icon" src="./img/chev.svg" alt="" />
+				</div>
+				<div class="dropdown__body">
+					<ul class="dropdown__tabs">
+						<li class="dropdown__tab">Вертикальная</li>
+						<li class="dropdown__tab">Горизонтальная</li>
+					</ul>
+				</div>
+			</div>
+			<div class="assortment__menu-drop">
+				<div class="dropdown__head">
+					<p class="dropdown__head-name">Ціна, ₴</p>
+					<img class="dropdown__head-icon" src="./img/chev.svg" alt="" />
+				</div>
+				<div class="dropdown__body">
+					<div class="dropdown__inputs">
+						<div class="dropdown__input">
+							<label>від</label>
+							<input type="text" id="price-min" value="400" />
+						</div>
+						<div class="dropdown__input">
+							<label>до</label>
+							<input type="text" id="price-max" value="12000" />
+						</div>
+					</div>
+					<div id="price-slider"></div>
+				</div>
+			</div>
+
+			<button class="assortment__btn-reset">Сбросить фильтры</button>
+		</div>
+	</div>
+	<div class="assortment__right">
+		<ul class="breadcrumbs">
+			<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+			<li class="breadcrumbs__item">
+				<img src="./img/chev-right.svg" alt="" />
+			</li>
+			<li class="breadcrumbs__item"><a href="#">Пластиковые емкости</a></li>
+			<li class="breadcrumbs__item">
+				<img src="./img/chev-right.svg" alt="" />
+			</li>
+			<li class="breadcrumbs__item"><a href="#">Емкости по форме</a></li>
+			<li class="breadcrumbs__item">
+				<img src="./img/chev-right.svg" alt="" />
+			</li>
+			<li class="breadcrumbs__item">Пластиковые емкости</li>
+		</ul>
+		<button class="assortment__right-btn-filter">Фільтр</button>
+		<h1 class="assortment__right-title">Квадратные емкости</h1>
+		<div class="assortment__right-slider--wrap">
+			<button class="assortment__right-slider__prev">
+				<img src="./img/chev-slider.svg" alt="" />
+			</button>
+			<div class="assortment__right-slider swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-1.png" alt="" />
+							<p>Квадратные</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-2.png" alt="" />
+							<p>Конусообразные</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-3.png" alt="" />
+							<p>Вертикальные</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide active" href="#">
+							<img src="./img/cat-4.png" alt="" />
+							<p>Горизонтальные</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-5.png" alt="" />
+							<p>Еврокуб</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-6.png" alt="" />
+							<p>Прямоугольные плоские</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-7.png" alt="" />
+							<p>Емкости для КАС</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-1.png" alt="" />
+							<p>Квадратные</p>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="assortment__right-slide" href="#">
+							<img src="./img/cat-2.png" alt="" />
+							<p>Конусообразные</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<button class="assortment__right-slider__next">
+				<img src="./img/chev-slider.svg" alt="" />
+			</button>
+		</div>
+		<div class="assortment__right-filter">
+			<div class="assortment__right-volume">
+				<p class="assortment__right-volume--label">Объем:</p>
+				<div class="assortment__right-volume--switcher">
+					<a class="assortment__right-volume--switch" href="#">Любой</a>
+					<a class="assortment__right-volume--switch" href="#">50</a>
+					<a class="assortment__right-volume--switch" href="#">75</a>
+					<a class="assortment__right-volume--switch" href="#">100</a>
+					<a class="assortment__right-volume--switch" href="#">150</a>
+					<a class="assortment__right-volume--switch active" href="#">200</a>
+					<a class="assortment__right-volume--switch" href="#">300</a>
+					<a class="assortment__right-volume--switch" href="#">400</a>
+					<a class="assortment__right-volume--switch" href="#">500</a>
+					<a class="assortment__right-volume--switch" href="#">1000</a>
+				</div>
+			</div>
+			<div class="assortment__right-sort">
+				<div class="drop-sort" id="sortDropdown">
+					<button
+						class="drop-sort__toggle"
+						type="button"
+						aria-haspopup="listbox"
+						aria-expanded="false"
+						aria-labelledby="sortLabel sortValue"
+					>
+						<span class="drop-sort__value" id="sortValue">Спочатку нові</span>
+						<span class="drop-sort__icon" aria-hidden="true"
+							><img src="./img/chev.svg" alt=""
+						/></span>
+					</button>
+
+					<ul
+						class="drop-sort__menu"
+						role="listbox"
+						aria-labelledby="sortLabel"
+					>
+						<li
+							class="drop-sort__option"
+							role="option"
+							data-value="newest"
+							aria-selected="true"
+						>
+							Спочатку нові
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li class="drop-sort__option" role="option" data-value="popular">
+							Спочатку популярні
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li class="drop-sort__option" role="option" data-value="price-asc">
+							За зростанням ціни
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li class="drop-sort__option" role="option" data-value="price-desc">
+							За зниженням ціни
+							<img src="./img/Check.svg" alt="" />
+						</li>
+					</ul>
+				</div>
+				<div class="drop-sort" id="perPageDropdown">
+					<button
+						class="drop-sort__toggle"
+						type="button"
+						aria-haspopup="listbox"
+						aria-expanded="false"
+						aria-labelledby="perPageLabel perPageValue"
+					>
+						<span class="drop-sort__value" id="perPageValue"
+							>по 25 товарів</span
+						>
+						<span class="drop-sort__icon" aria-hidden="true"
+							><img src="./img/chev.svg" alt=""
+						/></span>
+					</button>
+
+					<ul
+						class="drop-sort__menu"
+						role="listbox"
+						aria-labelledby="perPageLabel"
+					>
+						<li class="drop-sort__option" role="option" data-value="12">
+							по 12 товарів
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li
+							class="drop-sort__option"
+							role="option"
+							data-value="25"
+							aria-selected="true"
+						>
+							по 25 товарів
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li class="drop-sort__option" role="option" data-value="50">
+							по 50 товарів
+							<img src="./img/Check.svg" alt="" />
+						</li>
+						<li class="drop-sort__option" role="option" data-value="100">
+							по 100 товарів
+							<img src="./img/Check.svg" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="catalog__list">
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+			<div class="catalog__card">
+				<div class="catalog__marks">
+					<button class="like">
+						<img src="./img/card-heart.svg" alt="" />
+					</button>
+					<p class="action">Акция</p>
+					<div class="new">Новинка</div>
+				</div>
+				<img
+					class="catalog__card-img"
+					src="./img/p-3.png"
+					alt="Емкость горизонтальная"
+				/>
+				<p class="catalog__card-tag">Мелкая тара</p>
+				<h5 class="catalog__card-title">
+					Емкость горизонтальная для перевозки КАС, воды 6500 л
+				</h5>
+				<div class="catalog__card-review">
+					<img src="./img/Star.svg" alt="" />
+					<p>4,8</p>
+					<a href="#">17 отзывов</a>
+				</div>
+				<div class="catalog__card-price">
+					<div class="price">
+						<p class="new">47 520 ₴</p>
+						<p class="old">50 000 ₴</p>
+						<p class="current">95 ₴</p>
+					</div>
+					<a class="cart" href="#"><img src="./img/cart.svg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+		<ul class="pagination">
+			<li class="pagination__item">
+				<a href="#"><img src="./img/pag-left.svg" alt="" /></a>
+			</li>
+			<li class="pagination__item active">
+				<a href="#">1</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">2</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">3</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">4</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">5</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">...</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#">128</a>
+			</li>
+			<li class="pagination__item">
+				<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="reviews">
+	<h2 class="reviews__title">Последние отзывы</h2>
+	<ul class="reviews__list">
+		<li class="reviews__item">
+			<div class="reviews__item-top">
+				<ul class="rate">
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+				</ul>
+				<div class="name">Валентин, 25 марта 2025</div>
+			</div>
+			<p class="reviews__item-text">
+				Устанавливали пластиковый септик 2 месяца назад. Сначала переживал, что
+				корпус может не выдержать нагрузки, но материал оказался прочный, стенки
+				толстые. Монтаж прошёл без проблем, запаха нет, работает тихо. В
+				обслуживании удобнее, чем бетонный. Очень доволен.
+			</p>
+			<div class="reviews__item-card">
+				<img src="./img/r-1.png" alt="" />
+				<div class="info">
+					<h5>Опрыскиватель аккумуляторный "Литолан" 5л</h5>
+					<p>950 ₴</p>
+				</div>
+				<span></span>
+				<button class="cart"><img src="./img/cart.svg" alt="" /></button>
+			</div>
+		</li>
+		<li class="reviews__item">
+			<div class="reviews__item-top">
+				<ul class="rate">
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+				</ul>
+				<div class="name">Екатерина, 10 марта 2025</div>
+			</div>
+			<p class="reviews__item-text">
+				Покупали несколько 20-литровых канистр для дачи. Пластик плотный, не
+				воняет, ручки удобные — даже полный вес легко переносить. Крышки
+				закручиваются плотно, ничего не проливается в машине. Соотношение
+				цена/качество отличное. Однозначно рекомендуюz
+			</p>
+			<div class="reviews__item-card">
+				<img src="./img/r-2.png" alt="" />
+				<div class="info">
+					<h5>Емкость для воды вертикальная, две горловины, 10000 л</h5>
+					<p>40 000 ₴</p>
+				</div>
+				<span></span>
+				<button class="cart"><img src="./img/cart.svg" alt="" /></button>
+			</div>
+		</li>
+		<li class="reviews__item">
+			<div class="reviews__item-top">
+				<ul class="rate">
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+					<li class="rate__star"><img src="./img/Star.svg" alt="" /></li>
+				</ul>
+				<div class="name">Игорь, 5 марта 2025</div>
+			</div>
+			<p class="reviews__item-text">
+				Взял пластиковую ёмкость на 200 литров для хранения дождевой воды. Стоит
+				на улице всё лето — пластик не выгорает, не трескается. Кран снизу очень
+				удобен, можно подключать шланг. Теперь полив огорода стал намного проще.
+				Советую!
+			</p>
+			<div class="reviews__item-card">
+				<img src="./img/r-3.png" alt="" />
+				<div class="info">
+					<h5>Пластиковая канистра Litolan с носиком для ГСМ, 20л</h5>
+					<p>460 ₴</p>
+				</div>
+				<span></span>
+				<button class="cart"><img src="./img/cart.svg" alt="" /></button>
+			</div>
+		</li>
+	</ul>
+</section>
+<section class="information">
+	<p>
+		Популярность квадратных пластиковых емкостей для воды из года в год не
+		теряет своих позиций. И это не удивительно - они надежны и удобны в
+		использовании. Вам нужна кубовая емкость? Тогда вы попали по нужному адресу
+		- компания "Литолан" является производителем широкого ассортимента
+		пластиковых изделий, среди которых вы можете купить кубовые емкости.
+		Интересуют подробности? Тогда читаем дальше.
+	</p>
+	<h4>В чем преимущество кубовой емкости для воды</h4>
+	<p>
+		Для того чтобы оценить все достоинства, рассмотрим как сделаны и из чего
+		состоят накопительные квадратные емкости для воды.
+	</p>
+	<ol>
+		<li>
+			Квадратные резервуары производства "Литолан" изготавливают по технологии
+			ротационного формования, что позволяет на выходе получить изделие без
+			швов. Это особенно важно, когда из-за большого объема жидкости внутри
+			резервуара возникает давление на стенки и, при наличии швов, они рискуют
+			разойтись.
+		</li>
+		<li>
+			Благодаря новейшей технологии производства и качеству материала из
+			которого изготовлена емкость, резервуары способны выдерживать довольно
+			большой диапазон температур (-40…+70 °С), что также имеет особое значение,
+			так как зачастую такие баки устанавливают на улице.
+		</li>
+		<li>
+			Большой выбор производимых объемов (от 100 до 1000 л) позволяет подобрать
+			наиболее подходящий вариант.
+		</li>
+		<li>
+			Емкость для воды куб формы оснащена широкой горловиной и съемной крышкой,
+			благодаря чему ее легко чистить внутри. Помимо этого, внизу изделие
+			оборудовано резьбовым отверстием.
+		</li>
+		<li>
+			Благодаря удобной форме и относительно небольшому весу (в сравнении с
+			металлическими), кубовые емкости легко заносить в помещение, т.к. они
+			проходят в дверной проем, а также их легко установить.
+		</li>
+		<li>
+			Еще немаловажным является срок службы изделий из пластика - резервуары
+			"Литолан", при правильном использовании будут вам служить не менее 50-ти
+			лет.
+		</li>
+	</ol>
+	<p>
+		Мы всегда стараемся идти навстречу пожеланиям клиента, поэтому, кроме
+		очевидных плюсов использования емкостей куб, у вас есть масса дополнительных
+		возможностей:
+	</p>
+	<ul>
+		<li>
+			Выбор цвета. Как правило, производителями пластиковых резервуаров не
+			предлагается широкий выбор цветовой гаммы. Клиенты "Литолан" могут
+			заказать и купить квадратные емкости не только стандартных белого и синего
+			цветов, но также красного, зелёного, жёлтого, чёрного и даже мраморного.
+		</li>
+		<li>
+			Дополнительные возможности. Кроме стандартной комплектации, нашими
+			специалистами под заказ могут быть установлены дополнительные штуцеры.
+			Обращаем ваше внимание - не стоит производить такие операции
+			самостоятельно, так как это может негативно отразится на сроке службы
+			изделия.
+		</li>
+		<li>
+			Выбор толщины стенки изделия. При необходимости, под заказ возможно
+			выполнение изделия с увеличенной толщиной стенки.
+		</li>
+	</ul>
+	<img src="./img/info-2.png" alt="" />
+	<h4>Где используются квадратные емкости</h4>
+	<p>
+		Сферы применения таких резервуаров очень разнообразны. Как правило, они
+		используются:
+	</p>
+	<ul>
+		<li>для запаса питьевой и технической воды в частных домах и квартирах;</li>
+		<li>в качестве резервуара для летнего душа;</li>
+		<li>
+			для хранения воды в саду/огороде, для полива насаждений, а также в
+			качестве резервуара оросительных систем;
+		</li>
+		<li>
+			в качестве емкости для хранения пищевых продуктов, в том числе маринадов и
+			солений;
+		</li>
+		<li>
+			помимо этого, такую емкость можно использовать как бак для топлива и
+			некоторых других веществ (в этом случае необходимо свериться с таблицей
+			устойчивости материала к агрессивным средам).
+		</li>
+	</ul>
+	<p>
+		Если вы решили купить емкость для воды, но переживаете, что стоимость будет
+		слишком высока, обращайтесь к нам - цена на квадратные емкости "Литолан" вас
+		приятно удивит! Для получения более детальной информации и заказа
+		обращайтесь к нашим консультантам по указанным телефонам.
+	</p>
+	<h4>Цены на квадратные емкости</h4>
+	<div class="product-list">
+		<div class="product-item">
+			<div class="product-title">
+				Трехполюсный ввод с пластинами квадратные для ящика, сечение шины на 300
+				А
+			</div>
+			<div class="product-price">2401 грн</div>
+		</div>
+
+		<div class="product-item">
+			<div class="product-title">
+				Пластинчатая вилка для ящика, техническая буквеная ЕЗОЗТХ
+			</div>
+			<div class="product-price">4225 грн</div>
+		</div>
+
+		<div class="product-item">
+			<div class="product-title">
+				Блок прямоугольной пластинчатой вилки на 300 А универсальный ЕЗОЗТТ
+			</div>
+			<div class="product-price">3570 грн</div>
+		</div>
+
+		<div class="product-item">
+			<div class="product-title">
+				Пластинчатая прямоугольная вилка для ящика на 200 А ЕЗОЗТТ
+			</div>
+			<div class="product-price">2940 грн</div>
+		</div>
+
+		<div class="product-item">
+			<div class="product-title">
+				Вилка пластинчатая овальная для ящика для рудных и морских объектов 100
+				А ЕЗОЗОО
+			</div>
+			<div class="product-price">1485 грн</div>
+		</div>
+	</div>
+</section>
+<section class="faq">
+	<h4 class="faq__title">Вопросы и ответы</h4>
+	<ul class="faq__list">
+		<li class="faq__item">
+			<div class="faq__item-top">
+				<p>А самостоятельно можно врезать шутцер?</p>
+				<img src="./img/chev.svg" alt="" />
+			</div>
+			<div class="faq__item-bottom">
+				<p>
+					В принципе, вы можете сделать такой монтаж самостоятельно, используя
+					дрель и специальные насадки. Однако, если такой монтаж не был
+					согласован с изготовителем, либо был выполнен технически неправильно,
+					на изделие не распространяется гарантийный срок.
+				</p>
+			</div>
+		</li>
+		<li class="faq__item">
+			<div class="faq__item-top">
+				<p>Какие размеры имеют горловины баков для жидкостей?</p>
+				<img src="./img/chev.svg" alt="" />
+			</div>
+			<div class="faq__item-bottom">
+				<p>
+					В принципе, вы можете сделать такой монтаж самостоятельно, используя
+					дрель и специальные насадки. Однако, если такой монтаж не был
+					согласован с изготовителем, либо был выполнен технически неправильно,
+					на изделие не распространяется гарантийный срок.
+				</p>
+			</div>
+		</li>
+		<li class="faq__item">
+			<div class="faq__item-top">
+				<p>Как правильно закапывать емкость?</p>
+				<img src="./img/chev.svg" alt="" />
+			</div>
+			<div class="faq__item-bottom">
+				<p>
+					В принципе, вы можете сделать такой монтаж самостоятельно, используя
+					дрель и специальные насадки. Однако, если такой монтаж не был
+					согласован с изготовителем, либо был выполнен технически неправильно,
+					на изделие не распространяется гарантийный срок.
+				</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+			</main>
+			<footer class="footer">
+	<div class="footer__top">
+		<ul class="footer__top-list">
+			<li class="footer__top-item">
+				<img src="./img/viber.svg" alt="" />
+				<a href="tel:0673477541">(067) 347 75 41</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0674512031">(067) 451 20 31</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0631182813">(063) 118 28 13</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0631182813">(063) 118 28 13</a>
+			</li>
+		</ul>
+	</div>
+	<div class="footer__middle">
+		<div class="footer__left">
+			<h5>Компания</h5>
+			<ul>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Наши партнеры</a></li>
+				<li><a href="#">Вопросы и ответы</a></li>
+				<li><a href="#">Возврат и обмен</a></li>
+				<li><a href="#">Гарантийное обслуживание</a></li>
+				<li><a href="#">Сертификаты</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Видео</a></li>
+				<li><a href="#">Фото</a></li>
+				<li><a href="#">Блог</a></li>
+			</ul>
+		</div>
+		<div class="footer__center">
+			<h5>Производство</h5>
+			<ul>
+				<li><a href="#">Емкости для воды</a></li>
+				<li><a href="#">Емкости для септиков</a></li>
+				<li><a href="#">Емкости для душа</a></li>
+				<li><a href="#">Мелкая тара</a></li>
+				<li><a href="#">Детские площадки и мебель</a></li>
+				<li><a href="#">Мусорные урны</a></li>
+				<li><a href="#">Сборные пластиковые емкости</a></li>
+				<li><a href="#">Дорожное ограждение</a></li>
+				<li><a href="#">Промышленные красители</a></li>
+				<li><a href="#">Емкости на заказ</a></li>
+				<li><a href="#">Ремонт пластиковых емкостей</a></li>
+				<li><a href="#">Распродажа</a></li>
+			</ul>
+		</div>
+		<div class="footer__right">
+			<div class="footer__right-top">
+				<h5>Помощь</h5>
+				<ul>
+					<li><a href="#">Оптовым покупателям</a></li>
+					<li><a href="#">Технологии производства</a></li>
+					<li>
+						<a href="#">Инструкция по эксплуатации пластиковых емкостей</a>
+					</li>
+					<li><a href="#">Использование емкостей для подземного монтажа</a></li>
+					<li><a href="#">Таблица устойчивости полиэтилена</a></li>
+					<li><a href="#">Карта сайта</a></li>
+				</ul>
+			</div>
+			<div class="footer__right-bottom">
+				<ul class="socials">
+					<li class="social">
+						<a href="#"><img src="./img/youtube.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/facebook.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/insta.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/messenger.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/viber.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<button class="contact-us-btn">
+							<img src="./img/plane.svg" alt="" />
+							Напишите нам
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<ul class="footer__bottom-payment">
+			<li class="footer__bottom-payment-item">
+				<img src="./img/visa.svg" alt="" />
+			</li>
+			<li class="footer__bottom-payment-item">
+				<img src="./img/ms.svg" alt="" />
+			</li>
+		</ul>
+		<div class="footer__bottom-contacts">
+			<div class="footer__bottom-contacts--reviews">
+				<p>Рейтинг 5/5 на основе 285 оценок.</p>
+				<ul>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+				</ul>
+			</div>
+			<ul class="footer__bottom-cities">
+				<li>Одесса</li>
+				<li>Киев</li>
+				<li>Львов</li>
+				<li>Харьков</li>
+				<li>Днепр</li>
+				<li>Чернигов</li>
+				<li>Черкассы</li>
+				<li>Винница</li>
+				<li>Житомир</li>
+				<li>Запорожье</li>
+				<li>Ивано-Франковск</li>
+				<li>Кропивницкий</li>
+				<li>Луцк</li>
+				<li>Николаев</li>
+				<li>Полтава</li>
+				<li>Ровно</li>
+				<li>Сумы</li>
+				<li>Тернополь</li>
+				<li>Ужгород</li>
+				<li>Херсон</li>
+				<li>Хмельницкий</li>
+				<li>Черновцы</li>
+			</ul>
+			<p class="footer__bottom-creator">Создание сайта – NextWeb</p>
+		</div>
+	</div>
+	<div class="footer__descr">
+		<img src="./img/iso.svg" alt="" />
+		<p>
+			Все материалы данного сайта являются объектами авторского права (в том
+			числе дизайн). <br />
+			Запрещается любое использование информации и объектов без письменного
+			согласия ТОВ «Литолан».
+		</p>
+		<span>© Litolan, 2026</span>
+	</div>
+</footer>
+
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

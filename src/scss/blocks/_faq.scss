@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.faq {
+	@include flex(column, flex-start, flex-start, 16px);
+	padding: 32px;
+	border-radius: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: $white;
+	@media (max-width: 767px) {
+		padding: 12px;
+	}
+	&__title {
+		@include text-style(24px, 500, 28px);
+	}
+
+	&__list {
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&__item {
+		@include flex(column, flex-start, flex-start);
+		padding: 16px 16px 8px 16px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $bg;
+		@media (max-width: 767px) {
+			padding: 12px 12px 6px 12px;
+		}
+	}
+
+	&__item-top {
+		cursor: pointer;
+		width: 100%;
+		@include flex(row, space-between, center);
+		p {
+			@include text-style(16px, 500, 20px);
+		}
+	}
+
+	&__item-bottom {
+		padding-top: 8px;
+		max-height: 0;
+		overflow: hidden;
+		@include transition;
+		@media (max-width: 767px) {
+			padding-top: 6px;
+		}
+	}
+}

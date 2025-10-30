@@ -1,5 +1,7 @@
 export function initPlayVideo() {
 	const videoWrapper = document.querySelector('.about__content-video')
+	if (!videoWrapper) return // Немає елемента — вийти
+
 	const playBtn = videoWrapper.querySelector('.about__content-play')
 	const panel = videoWrapper.querySelector('.about__content-panel')
 	const overlay = videoWrapper.querySelector('.about__content-overlay')
