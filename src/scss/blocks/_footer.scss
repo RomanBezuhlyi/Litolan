@@ -264,3 +264,235 @@
 		}
 	}
 }
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	@include box(100%);
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 111;
+
+	&-content {
+		@include centering;
+		@include flex(column, center, center, 20px);
+		padding: 32px;
+		width: 480px;
+		position: relative;
+		border-radius: 16px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.24);
+		@media (max-width: 767px) {
+			width: calc(100% - 16px);
+			padding: 16px;
+		}
+	}
+
+	&-close {
+		@include center;
+		@include box(24px);
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		cursor: pointer;
+	}
+
+	&-title {
+		@include text-style(24px, 500, 28px);
+	}
+
+	&-form {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 12px);
+		padding: 20px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $bg;
+	}
+
+	&-form-input {
+		@include box(100%, 48px);
+		padding: 8px 12px;
+		@include flex(column, center, flex-start);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@include text-style(16px, 400, 20px);
+	}
+
+	&-form-textarea {
+		@include box(100%, 80px);
+		padding: 8px 12px;
+		@include flex(column, center, flex-start);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@include text-style(16px, 400, 20px);
+		resize: none;
+	}
+
+	&-form-stars-wrap {
+		width: 100%;
+		@include flex(column, center, center, 12px);
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+	}
+
+	&-form-stars-title {
+		@include text-style(16px, 500, 20px, center);
+	}
+
+	&-form-stars-text {
+		color: $grey;
+		@include text-style(16px, 400, 20px, center);
+	}
+
+	&-form-stars-btn {
+		width: 100%;
+		@include center;
+		padding: 12px 24px;
+		border-radius: 8px;
+		background: $yellow;
+		color: $white;
+		@include text-style(16px, 500, 20px);
+	}
+
+	.stars {
+		display: flex;
+		gap: 5px;
+	}
+	.stars .star {
+		cursor: pointer;
+	}
+	.thank-title {
+		@include text-style(24px, 500, 28px, center);
+		margin-bottom: -12px;
+	}
+	.thank-text {
+		@include text-style(16px, 400, 20px, center);
+	}
+}
+.modal-cart {
+	.modal-content {
+		@include centering;
+		width: 800px;
+		@media (max-width: 767px) {
+			width: calc(100% - 16px);
+			max-height: 90vh;
+		}
+	}
+
+	&-title {
+		width: 100%;
+		@include flex(row, flex-start, center, 12px);
+		h2 {
+			@include text-style(24px, 500, 28px);
+		}
+		p {
+			@include text-style(16px, 400, 20px);
+		}
+	}
+
+	&-body {
+		width: 100%;
+		@include flex(column, center, center, 4px);
+		@media (max-width: 767px) {
+			padding: 10px;
+			min-height: 400px;
+			overflow: scroll;
+		}
+	}
+
+	&-item {
+		position: relative;
+		width: 100%;
+		@include flex(row, flex-start, center, 12px);
+		padding: 8px 16px 8px 8px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $bg;
+	}
+
+	&-item__img {
+		@include box(84px);
+		object-fit: cover;
+		@media (max-width: 767px) {
+			@include box(50px);
+		}
+	}
+
+	&-item__info {
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&-item__title {
+		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
+	}
+
+	&-item__price {
+		@include flex(row, flex-start, center, 8px);
+		.new {
+			color: $red;
+			@include text-style(16px, 400, 20px);
+		}
+		.old {
+			color: $grey;
+			@include text-style(14px, 400, 16px);
+			text-decoration-line: line-through;
+		}
+		.current {
+			color: $grey;
+			@include text-style(16px, 400, 20px);
+		}
+	}
+
+	&-item__btn {
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+		@media (max-width: 767px) {
+			bottom: 16px;
+			top: auto;
+			transform: translateY(0);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: -12px;
+			top: 50%;
+			transform: translateY(-50%);
+			@include box(1px, 16px);
+			background: #d9d9d9;
+		}
+	}
+
+	&-bottom {
+		width: 100%;
+		@include flex(row, flex-end, center, 12px);
+		@media (max-width: 767px) {
+			gap: 4px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		p {
+			@include text-style(20px, 500, 24px, right);
+		}
+		button {
+			@include center;
+			padding: 12px 24px;
+			border-radius: 8px;
+			background: $yellow;
+			color: $white;
+			@include text-style(16px, 500, 20px);
+		}
+	}
+}

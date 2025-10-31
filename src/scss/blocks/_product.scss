@@ -188,32 +188,6 @@
 		margin-bottom: 20px;
 	}
 
-	.quantity {
-		@include flex(row, center, center, 8px);
-		padding: 8px 12px;
-		border-radius: 8px;
-		border: 1px solid rgba(0, 0, 0, 0.06);
-		background: $white;
-		overflow: hidden;
-	}
-
-	.quantity__btn {
-		@include center;
-		@include box(24px);
-		cursor: pointer;
-		@include transition;
-	}
-
-	.quantity__input {
-		width: 40px;
-		@include text-style(16px, 500, 20px, center);
-	}
-
-	.quantity__separator {
-		@include box(1px, 16px);
-		background: #d9d9d9;
-	}
-
 	.add-to-cart {
 		@include flex(row, center, center, 12px);
 		padding: 8px 16px;
@@ -512,4 +486,30 @@
 			}
 		}
 	}
+}
+
+.quantity {
+	@include flex(row, center, center, 8px);
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: $white;
+	overflow: hidden;
+}
+
+.quantity__btn {
+	@include center;
+	@include box(24px);
+	cursor: pointer;
+	@include transition;
+}
+
+.quantity__input {
+	width: 40px;
+	@include text-style(16px, 500, 20px, center);
+}
+
+.quantity__separator {
+	@include box(1px, 16px);
+	background: #d9d9d9;
 }

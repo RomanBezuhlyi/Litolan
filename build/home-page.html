@@ -130,7 +130,7 @@
 					<img src="./img/heart.svg" alt="" />
 					<img class="mark" src="./img/red-dot.svg" alt="" />
 				</button>
-				<button class="header__bottom-cart">
+				<button class="header__bottom-cart open-cart">
 					<div class="header__bottom-cart--img">
 						<img class="cart" src="./img/cart.svg" alt="" />
 						<img class="mark" src="./img/red-dot.svg" alt="" />
@@ -1732,6 +1732,396 @@
 		<span>© Litolan, 2026</span>
 	</div>
 </footer>
+<!-- Модалка -->
+<div class="modal" id="reviewModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<h2 class="modal-title">Оставить отзыв</h2>
+		<form class="modal-form" id="reviewForm">
+			<input
+				class="modal-form-input"
+				type="text"
+				id="name"
+				placeholder="Ваше имя"
+				required
+			/>
+			<textarea
+				class="modal-form-textarea"
+				id="reviewText"
+				placeholder="Текст отзыва"
+				required
+			></textarea>
+			<div class="modal-form-stars-wrap">
+				<p class="modal-form-stars-title">Ваша оценка</p>
+				<div class="stars">
+					<!-- Порожні зірки SVG -->
+					<svg
+						class="star"
+						data-value="1"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="2"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="3"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="4"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="5"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</div>
+				<p class="modal-form-stars-text">Оцініть товар</p>
+			</div>
+			<button class="modal-form-stars-btn modal-form-btn" type="submit">
+				Оставить отзыв
+			</button>
+		</form>
+	</div>
+</div>
+
+<!-- Повідомлення після відправки -->
+<div class="modal" id="thanksModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<img class="thank-img" src="./img/big-star.png" alt="" />
+		<h2 class="thank-title">Отзыв принят</h2>
+		<p class="thank-text">
+			После проверки модератором он будет опубликован на сайте
+		</p>
+	</div>
+</div>
+
+<div class="modal modal-cart" id="cartModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<div class="modal-cart-title">
+			<h2>Корзина</h2>
+			<p>4 товара, 35 000 ₴</p>
+		</div>
+		<ul class="modal-cart-body">
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-1.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Опрыскиватель аккумуляторный "Литолан" 5л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="new">950 ₴</li>
+						<li class="old">1150 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-1.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Опрыскиватель аккумуляторный "Литолан" 5л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="new">950 ₴</li>
+						<li class="old">1150 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-2.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Емкость для воды вертикальная, две горловины, 10000 л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">40 000 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-3.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Пластиковая канистра Litolan с носиком для ГСМ, 20л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">460 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-4.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Пластиковая канистра пищевая Litolan, 10 л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">95 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+		</ul>
+		<div class="modal-cart-bottom">
+			<p>Сумма: 35 000 ₴</p>
+			<button>Оформить заказ</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Функції для блокування/розблокування скролу
+	function disableScroll() {
+		document.body.style.overflow = 'hidden'
+	}
+
+	function enableScroll() {
+		document.body.style.overflow = ''
+	}
+
+	// ==========================
+	// Модалка відгуку
+	// ==========================
+	const reviewBtn = document.querySelector('.reviews__btn')
+	const reviewModal = document.getElementById('reviewModal')
+	const thanksModal = document.getElementById('thanksModal')
+	const closeButtons = document.querySelectorAll('.close')
+	const stars = document.querySelectorAll('.stars .star')
+	const ratingText = document.querySelector('.modal-form-stars-text')
+	let rating = 0
+
+	const ratingMessages = [
+		'Очень плохо',
+		'Плохо',
+		'Нормально',
+		'Хорошо',
+		'Отлично',
+	]
+
+	// Відкриття модалки відгуку
+	reviewBtn.addEventListener('click', () => {
+		reviewModal.style.display = 'flex'
+		disableScroll()
+	})
+
+	// Закриття всіх модалок при кліку на хрестик
+	closeButtons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			reviewModal.style.display = 'none'
+			thanksModal.style.display = 'none'
+			cartModal.style.display = 'none'
+			enableScroll()
+		})
+	})
+
+	// Закриття модалки при кліку поза її вмістом
+	;[reviewModal, thanksModal].forEach(modal => {
+		modal.addEventListener('click', e => {
+			if (e.target === modal) {
+				modal.style.display = 'none'
+				enableScroll()
+			}
+		})
+	})
+
+	// Вибір рейтингу та оновлення зірок і тексту
+	stars.forEach((star, index) => {
+		star.addEventListener('click', () => {
+			rating = star.dataset.value
+
+			stars.forEach((s, i) => {
+				const path = s.querySelector('path')
+				if (i < rating) {
+					path.setAttribute('fill', '#F4B70B') // заповнена
+					path.removeAttribute('stroke')
+				} else {
+					path.setAttribute('fill', 'none') // порожня
+					path.setAttribute('stroke', '#F4B70B')
+					path.setAttribute('stroke-width', '3')
+				}
+			})
+
+			// Оновлюємо текст нижче зірок
+			ratingText.textContent = ratingMessages[rating - 1]
+		})
+	})
+
+	// Відправка форми відгуку
+	document.getElementById('reviewForm').addEventListener('submit', e => {
+		e.preventDefault()
+		reviewModal.style.display = 'none'
+		thanksModal.style.display = 'flex'
+		// скрол залишається забороненим для thanksModal
+	})
+
+	// ==========================
+	// Модалка корзини
+	// ==========================
+	const cartBtns = document.querySelectorAll('.open-cart')
+	const cartModal = document.getElementById('cartModal')
+
+	cartBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			cartModal.style.display = 'flex'
+			disableScroll()
+		})
+	})
+
+	// Закриття модалки корзини при кліку поза її вмістом
+	cartModal.addEventListener('click', e => {
+		if (e.target === cartModal) {
+			cartModal.style.display = 'none'
+			enableScroll()
+		}
+	})
+</script>
 
 		</div>
 		<script
