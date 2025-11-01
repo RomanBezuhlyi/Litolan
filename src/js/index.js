@@ -3,6 +3,7 @@ import { initAssortment } from './modules/assortment'
 import { initCloseBanner } from './modules/banner'
 import { initCatalog } from './modules/catalog'
 import { initCheckbox } from './modules/checkbox'
+import { initCheckout } from './modules/checkout'
 import { initDropDown } from './modules/dropdown'
 import { initFaq } from './modules/faq'
 import { initMobileFilter } from './modules/filter'
@@ -41,4 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCheckbox()
 	initQuantity()
 	initAccordion()
+	initCheckout()
 })

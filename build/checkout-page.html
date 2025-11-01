@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/img/favicon-16x16.png"
+		/>
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="theme-color" content="#ffffff" />
+		<title>LITOLAN</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="header-wrapper">
+	<div class="header__banner">
+		<p class="header__banner-text">Персональные скидки для фермеров</p>
+		<button class="header__banner-close">
+			<img src="./img/close.svg" alt="" />
+		</button>
+	</div>
+	<div class="header">
+		<div class="header__top">
+			<nav class="header__top-nav">
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Информация
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
+							<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#">Доставка</a>
+				<a href="#"><img src="./img/exel.svg" alt="" />Прайс</a>
+				<a href="#">Контакты</a>
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Ru
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Ua</a></li>
+							<li class="dropdown__menu-item"><a href="#">En</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<p class="header__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
+			<div class="header__contacts">
+				<div class="header__contacts-numbers">
+					<a href="#"
+						><img class="viber" src="./img/viber.svg" alt="" /> (067) 347 75
+						41</a
+					>
+					<a href="#">(067) 451 20 31</a>
+				</div>
+				<div class="dropdown">
+					<a href="#" class="dropdown__toggle">
+						Одесса
+						<img class="chev" src="./img/chev.svg" alt="" />
+					</a>
+					<div class="dropdown__menu">
+						<ul class="dropdown__menu-list">
+							<li class="dropdown__menu-item"><a href="#">Киев</a></li>
+							<li class="dropdown__menu-item"><a href="#">Харьков</a></li>
+							<li class="dropdown__menu-item"><a href="#">Винница</a></li>
+						</ul>
+					</div>
+				</div>
+				<button class="header__btn">
+					<img src="./img/phone.svg" alt="" /> <span>Заказать звонок</span>
+				</button>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<a class="header__bottom-left" href="#"
+				><img class="logo" src="./img/logo.svg" alt=""
+			/></a>
+			<div class="header__bottom-center">
+				<button class="header__bottom-catalog open-catalog">
+					<img src="./img/dots.svg" alt="" />
+					Каталог
+				</button>
+				<div class="header__bottom-search">
+					<img class="search" src="./img/search.svg" alt="" />
+					<input type="text" placeholder="Поиск" />
+				</div>
+			</div>
+			<div class="header__bottom-right">
+				<div class="header__bottom-currency">
+					<div class="dropdown">
+						<a href="#" class="dropdown__toggle">
+							<img src="./img/currency.svg" alt="" />
+							<img class="chev" src="./img/chev.svg" alt="" />
+						</a>
+						<div class="dropdown__menu lang">
+							<ul class="dropdown__menu-list">
+								<li class="dropdown__menu-item"><a href="#">USD</a></li>
+								<li class="dropdown__menu-item"><a href="#">UAH</a></li>
+								<li class="dropdown__menu-item"><a href="#">EUR</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<button class="header__bottom-user">
+					<img src="./img/user.svg" alt="" />
+				</button>
+				<button class="header__bottom-heart">
+					<img src="./img/heart.svg" alt="" />
+					<img class="mark" src="./img/red-dot.svg" alt="" />
+				</button>
+				<button class="header__bottom-cart open-cart">
+					<div class="header__bottom-cart--img">
+						<img class="cart" src="./img/cart.svg" alt="" />
+						<img class="mark" src="./img/red-dot.svg" alt="" />
+					</div>
+					<span>3 товара, 5 780 ₴</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile">
+		<button class="header-mobile__left open-catalog">
+			<img src="./img/dots.svg" alt="" />
+			Каталог
+		</button>
+		<a class="header-mobile__center" href="#"
+			><img src="./img/logo.svg" alt=""
+		/></a>
+		<div class="header-mobile__right">
+			<button class="header-mobile__search">
+				<img src="./img/search.svg" alt="" />
+			</button>
+			<button class="header-mobile__burger">
+				<img src="./img/burger.svg" alt="" />
+			</button>
+		</div>
+	</div>
+	<div class="header-mobile-menu">
+		<nav class="header-mobile-menu__nav">
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Информация
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
+						<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="#">Доставка</a>
+			<a href="#"><img src="./img/exel.svg" alt="" />Прайс</a>
+			<a href="#">Контакты</a>
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Ru
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Ua</a></li>
+						<li class="dropdown__menu-item"><a href="#">En</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="#"
+				><img class="viber" src="./img/viber.svg" alt="" /> (067) 347 75 41</a
+			>
+			<a href="#">(067) 451 20 31</a>
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					Одесса
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">Киев</a></li>
+						<li class="dropdown__menu-item"><a href="#">Харьков</a></li>
+						<li class="dropdown__menu-item"><a href="#">Винница</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="header__bottom-currency">
+			<div class="dropdown">
+				<a href="#" class="dropdown__toggle">
+					<img src="./img/currency.svg" alt="" />
+					<img class="chev" src="./img/chev.svg" alt="" />
+				</a>
+				<div class="dropdown__menu lang">
+					<ul class="dropdown__menu-list">
+						<li class="dropdown__menu-item"><a href="#">USD</a></li>
+						<li class="dropdown__menu-item"><a href="#">UAH</a></li>
+						<li class="dropdown__menu-item"><a href="#">EUR</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<button class="header__btn">
+			<img src="./img/phone.svg" alt="" /> <span>Заказать звонок</span>
+		</button>
+		<p class="header__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
+	</div>
+
+	<div class="header-mobile-search">
+		<input type="text" placeholder="Поиск" />
+	</div>
+</header>
+<div class="bottom-menu">
+	<ul class="bottom-menu__list">
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/user.svg" alt="" /></a>
+		</li>
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/heart.svg" alt="" /></a>
+		</li>
+		<li class="bottom-menu__list">
+			<a href="#"><img src="./img/cart.svg" alt="" /></a>
+		</li>
+	</ul>
+</div>
+<div class="catalog__menu">
+	<div class="catalog__menu-col first">
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-1.svg" alt="" />
+			Пластиковые емкости
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-2.svg" alt="" />
+			Мелкая тара
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-3.svg" alt="" />
+			Канализация и водоотведение
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-4.svg" alt="" />
+			Сад огород
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-5.svg" alt="" />
+			Комплектующие для емкостей
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-6.svg" alt="" />
+			Дорожное ограждение
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-7.svg" alt="" />
+			Детская мебель и площадки
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-8.svg" alt="" />
+			Причалы и понтоны
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-9.svg" alt="" />
+			Мусорные контейнеры
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-10.svg" alt="" />
+			Разное
+		</a>
+		<a class="catalog__menu-item" href="#">
+			<img src="./img/m-11.svg" alt="" />
+			Хиты продаж
+		</a>
+	</div>
+	<div class="catalog__menu-col second">
+		<a class="catalog__menu-item" href="#">Емкости по форме</a>
+		<a class="catalog__menu-item" href="#">Емкости по назначению</a>
+		<a class="catalog__menu-item" href="#">Трехслойные емкости</a>
+		<a class="catalog__menu-item" href="#">Емкости оптом</a>
+		<a class="catalog__menu-item" href="#">Сборные емкости</a>
+		<a class="catalog__menu-item" href="#">Бочки пластиковые</a>
+	</div>
+	<div class="catalog__menu-col third">
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-1.png" alt="" />Квадратные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-2.png" alt="" />Конусообразные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-3.png" alt="" />Вертикальные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-4.png" alt="" />Горизонтальные емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-5.png" alt="" />Еврокуб</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-6.png" alt="" />Прямоугольные плоские емкости</a
+		>
+		<a class="catalog__menu-item second" href="#"
+			><img src="./img/cat-7.png" alt="" />Емкости для КАС</a
+		>
+	</div>
+	<div class="catalog__menu-col fourth">
+		<div class="catalog__menu-product">
+			<div class="catalog__menu-product-marks">
+				<p class="action">Акция</p>
+				<p class="new">Новинка</p>
+			</div>
+			<img class="catalog__menu-product--img" src="./img/slide-2.png" alt="" />
+			<div class="catalog__menu-product--info">
+				<h4 class="catalog__menu-product--title">Емкости для КАС</h4>
+				<p class="catalog__menu-product--text">5 000 литров, цена 31 999₴</p>
+				<div class="catalog__menu-product--panel">
+					<p class="catalog__menu-product--price">31 999₴</p>
+					<button class="catalog__menu-product--cart">
+						<img src="./img/cart.svg" alt="" />
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			<main><section class="checkout">
+	<div class="checkout__left">
+		<div class="checkout__block">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+				<li class="breadcrumbs__item">
+					<img src="./img/chev-right.svg" alt="" />
+				</li>
+				<li class="breadcrumbs__item">Оформление заказа</li>
+			</ul>
+			<h1 class="checkout__title">Оформление заказа</h1>
+			<div class="checkout__switcher">
+				<button class="checkout__switch active">Я покупаю впервые</button>
+				<button class="checkout__switch">Я уже зарегистрирован</button>
+			</div>
+			<div class="checkout__first">
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Контактная информация</h2>
+					<input type="text" placeholder="Имя и фамилия" />
+					<div class="checkout__row">
+						<input type="text" placeholder="Телефон" />
+						<input type="text" placeholder="Электронная почта" />
+					</div>
+					<span class="checkout__descr"
+						>Телефон и почта нужны для подтверждения заказа и его дальнейшего
+						отслеживания</span
+					>
+				</div>
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Способ доставки</h2>
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-vd" />
+						<span class="custom-checkbox"></span>
+						Самовивіз Великодолинське
+						<img class="delivery-option-img" src="./img/d-1.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-kyiv" />
+						<span class="custom-checkbox"></span>
+						Самовивіз Київ
+						<img class="delivery-option-img" src="./img/d-2.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="nova-poshta" />
+						<span class="custom-checkbox"></span>
+						Доставка на склад Нової Пошти
+						<img class="delivery-option-img" src="./img/d-3.svg" alt="" />
+					</label>
+					<div class="checkout__row nova-poshta-branch" id="nova-poshta-branch">
+						<input type="text" placeholder="Город" />
+						<input type="text" placeholder="Отделение Новой Почты" />
+					</div>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="delivery-warehouse" />
+						<span class="custom-checkbox"></span>
+						Доставка на склад Delivery
+						<img class="delivery-option-img" src="./img/d-4.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="courier" />
+						<span class="custom-checkbox"></span>
+						Адресна доставка кур'єром
+						<img class="delivery-option-img" src="./img/d-5.svg" alt="" />
+					</label>
+				</div>
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Способ оплаты</h2>
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-vd" />
+						<span class="custom-checkbox"></span>
+						Безналичный расчет ( в том числе с НДС)
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-kyiv" />
+						<span class="custom-checkbox"></span>
+						Онлайн оплата
+					</label>
+				</div>
+			</div>
+			<div class="checkout__second">
+				<div class="checkout__sub-block">
+					<input type="text" placeholder="Электронная почта" />
+					<input type="text" placeholder="Пароль" />
+					<div class="checkout__sub-block-bottom">
+						<button class="btn">Войти</button>
+						<a href="#">Напомнить пароль</a>
+					</div>
+				</div>
+				<div class="checkout__create-acc">
+					<img src="./img/key.png" alt="" />
+					<p>Покупаете впервые?</p>
+					<a href="#">Создайте новый аккаунт</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="checkout__right">
+		<div class="checkout__block">
+			<h2 class="checkout__subtitle">Содержимое заказа</h2>
+			<ul class="checkout__products">
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-1.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Опрыскиватель аккумуляторный "Литолан" 5л</p>
+						<span>950 ₴</span>
+						<span>1 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-2.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Емкость для воды вертикальная, две горловины, 10000 л</p>
+						<span>40 000 ₴</span>
+						<span>1 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-3.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Пластиковая канистра Litolan с носиком для ГСМ, 20л</p>
+						<span>460 ₴</span>
+						<span>2 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-4.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Пластиковая канистра пищевая Litolan, 10 л</p>
+						<span>95 ₴</span>
+						<span>5 шт</span>
+					</div>
+				</li>
+			</ul>
+			<div class="checkout__message">
+				<img src="./img/transit.svg" alt="" />
+				Предлагаем самые выгодные условия доставки на рынке
+			</div>
+			<p class="checkout__result">Итого к оплате: 35 000 ₴</p>
+			<button class="checkout__btn">Оформить заказ</button>
+			<div class="checkout__description">
+				<p>Совершая регистрацию, вы соглашаетесь</p>
+				<a href="#">пользовательским соглашением</a>
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+			<footer class="footer">
+	<div class="footer__top">
+		<ul class="footer__top-list">
+			<li class="footer__top-item">
+				<img src="./img/viber.svg" alt="" />
+				<a href="tel:0673477541">(067) 347 75 41</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0674512031">(067) 451 20 31</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0631182813">(063) 118 28 13</a>
+			</li>
+			<li class="footer__top-separator"></li>
+			<li class="footer__top-item">
+				<a href="tel:0631182813">(063) 118 28 13</a>
+			</li>
+		</ul>
+	</div>
+	<div class="footer__middle">
+		<div class="footer__left">
+			<h5>Компания</h5>
+			<ul>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Наши партнеры</a></li>
+				<li><a href="#">Вопросы и ответы</a></li>
+				<li><a href="#">Возврат и обмен</a></li>
+				<li><a href="#">Гарантийное обслуживание</a></li>
+				<li><a href="#">Сертификаты</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Видео</a></li>
+				<li><a href="#">Фото</a></li>
+				<li><a href="#">Блог</a></li>
+			</ul>
+		</div>
+		<div class="footer__center">
+			<h5>Производство</h5>
+			<ul>
+				<li><a href="#">Емкости для воды</a></li>
+				<li><a href="#">Емкости для септиков</a></li>
+				<li><a href="#">Емкости для душа</a></li>
+				<li><a href="#">Мелкая тара</a></li>
+				<li><a href="#">Детские площадки и мебель</a></li>
+				<li><a href="#">Мусорные урны</a></li>
+				<li><a href="#">Сборные пластиковые емкости</a></li>
+				<li><a href="#">Дорожное ограждение</a></li>
+				<li><a href="#">Промышленные красители</a></li>
+				<li><a href="#">Емкости на заказ</a></li>
+				<li><a href="#">Ремонт пластиковых емкостей</a></li>
+				<li><a href="#">Распродажа</a></li>
+			</ul>
+		</div>
+		<div class="footer__right">
+			<div class="footer__right-top">
+				<h5>Помощь</h5>
+				<ul>
+					<li><a href="#">Оптовым покупателям</a></li>
+					<li><a href="#">Технологии производства</a></li>
+					<li>
+						<a href="#">Инструкция по эксплуатации пластиковых емкостей</a>
+					</li>
+					<li><a href="#">Использование емкостей для подземного монтажа</a></li>
+					<li><a href="#">Таблица устойчивости полиэтилена</a></li>
+					<li><a href="#">Карта сайта</a></li>
+				</ul>
+			</div>
+			<div class="footer__right-bottom">
+				<ul class="socials">
+					<li class="social">
+						<a href="#"><img src="./img/youtube.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/facebook.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/insta.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/messenger.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<a href="#"><img src="./img/viber.svg" alt="" /></a>
+					</li>
+					<li class="social">
+						<button class="contact-us-btn">
+							<img src="./img/plane.svg" alt="" />
+							Напишите нам
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<ul class="footer__bottom-payment">
+			<li class="footer__bottom-payment-item">
+				<img src="./img/visa.svg" alt="" />
+			</li>
+			<li class="footer__bottom-payment-item">
+				<img src="./img/ms.svg" alt="" />
+			</li>
+		</ul>
+		<div class="footer__bottom-contacts">
+			<div class="footer__bottom-contacts--reviews">
+				<p>Рейтинг 5/5 на основе 285 оценок.</p>
+				<ul>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+					<li><img src="./img/Star.svg" alt="" /></li>
+				</ul>
+			</div>
+			<ul class="footer__bottom-cities">
+				<li>Одесса</li>
+				<li>Киев</li>
+				<li>Львов</li>
+				<li>Харьков</li>
+				<li>Днепр</li>
+				<li>Чернигов</li>
+				<li>Черкассы</li>
+				<li>Винница</li>
+				<li>Житомир</li>
+				<li>Запорожье</li>
+				<li>Ивано-Франковск</li>
+				<li>Кропивницкий</li>
+				<li>Луцк</li>
+				<li>Николаев</li>
+				<li>Полтава</li>
+				<li>Ровно</li>
+				<li>Сумы</li>
+				<li>Тернополь</li>
+				<li>Ужгород</li>
+				<li>Херсон</li>
+				<li>Хмельницкий</li>
+				<li>Черновцы</li>
+			</ul>
+			<p class="footer__bottom-creator">Создание сайта – NextWeb</p>
+		</div>
+	</div>
+	<div class="footer__descr">
+		<img src="./img/iso.svg" alt="" />
+		<p>
+			Все материалы данного сайта являются объектами авторского права (в том
+			числе дизайн). <br />
+			Запрещается любое использование информации и объектов без письменного
+			согласия ТОВ «Литолан».
+		</p>
+		<span>© Litolan, 2026</span>
+	</div>
+</footer>
+<!-- Модалка -->
+<div class="modal" id="reviewModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<h2 class="modal-title">Оставить отзыв</h2>
+		<form class="modal-form" id="reviewForm">
+			<input
+				class="modal-form-input"
+				type="text"
+				id="name"
+				placeholder="Ваше имя"
+				required
+			/>
+			<textarea
+				class="modal-form-textarea"
+				id="reviewText"
+				placeholder="Текст отзыва"
+				required
+			></textarea>
+			<div class="modal-form-stars-wrap">
+				<p class="modal-form-stars-title">Ваша оценка</p>
+				<div class="stars">
+					<!-- Порожні зірки SVG -->
+					<svg
+						class="star"
+						data-value="1"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="2"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="3"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="4"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+					<svg
+						class="star"
+						data-value="5"
+						xmlns="http://www.w3.org/2000/svg"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+					>
+						<path
+							d="M3.50244 15.5052C3.03257 15.0706 3.2878 14.2851 3.92335 14.2097L12.9287 13.1416C13.1877 13.1109 13.4127 12.9482 13.522 12.7114L17.3203 4.47669C17.5884 3.89554 18.4146 3.89543 18.6826 4.47658L22.481 12.7112C22.5902 12.9481 22.8137 13.1112 23.0728 13.1419L32.0786 14.2097C32.7142 14.2851 32.9687 15.0709 32.4988 15.5054L25.8416 21.6629C25.6501 21.84 25.5649 22.1036 25.6157 22.3594L27.3825 31.2539C27.5072 31.8816 26.8392 32.368 26.2807 32.0554L18.3677 27.6249C18.1401 27.4975 17.8636 27.4981 17.636 27.6255L9.72216 32.0543C9.1637 32.3669 8.49441 31.8816 8.61914 31.2539L10.3862 22.3599C10.437 22.1041 10.352 21.8399 10.1605 21.6628L3.50244 15.5052Z"
+							stroke="#F4B70B"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</div>
+				<p class="modal-form-stars-text">Оцініть товар</p>
+			</div>
+			<button class="modal-form-stars-btn modal-form-btn" type="submit">
+				Оставить отзыв
+			</button>
+		</form>
+	</div>
+</div>
+
+<!-- Повідомлення після відправки -->
+<div class="modal" id="thanksModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<img class="thank-img" src="./img/big-star.png" alt="" />
+		<h2 class="thank-title">Отзыв принят</h2>
+		<p class="thank-text">
+			После проверки модератором он будет опубликован на сайте
+		</p>
+	</div>
+</div>
+
+<div class="modal modal-cart" id="cartModal">
+	<div class="modal-content">
+		<button class="modal-close close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<div class="modal-cart-title">
+			<h2>Корзина</h2>
+			<p>4 товара, 35 000 ₴</p>
+		</div>
+		<ul class="modal-cart-body">
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-1.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Опрыскиватель аккумуляторный "Литолан" 5л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="new">950 ₴</li>
+						<li class="old">1150 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-1.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Опрыскиватель аккумуляторный "Литолан" 5л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="new">950 ₴</li>
+						<li class="old">1150 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-2.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Емкость для воды вертикальная, две горловины, 10000 л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">40 000 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-3.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Пластиковая канистра Litolan с носиком для ГСМ, 20л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">460 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+			<li class="modal-cart-item">
+				<img class="modal-cart-item__img" src="./img/cart-4.png" alt="" />
+				<div class="modal-cart-item__info">
+					<p class="modal-cart-item__title">
+						Пластиковая канистра пищевая Litolan, 10 л
+					</p>
+					<ul class="modal-cart-item__price">
+						<li class="current">95 ₴</li>
+					</ul>
+					<div class="quantity">
+						<button class="quantity__btn quantity__minus">
+							<img src="./img/minus.svg" alt="" />
+						</button>
+						<span class="quantity__separator"></span>
+						<input type="text" class="quantity__input" value="1" readonly />
+						<span class="quantity__separator"></span>
+
+						<button class="quantity__btn quantity__plus">
+							<img src="./img/plus.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="modal-cart-item__btn">
+					<img src="./img/trash.svg" alt="" />
+				</button>
+			</li>
+		</ul>
+		<div class="modal-cart-bottom">
+			<p>Сумма: 35 000 ₴</p>
+			<button>Оформить заказ</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Функції для блокування/розблокування скролу
+	function disableScroll() {
+		document.body.style.overflow = 'hidden'
+	}
+
+	function enableScroll() {
+		document.body.style.overflow = ''
+	}
+
+	// ==========================
+	// Модалка відгуку
+	// ==========================
+	const reviewBtn = document.querySelector('.reviews__btn')
+	const reviewModal = document.getElementById('reviewModal')
+	const thanksModal = document.getElementById('thanksModal')
+	const closeButtons = document.querySelectorAll('.close')
+	const stars = document.querySelectorAll('.stars .star')
+	const ratingText = document.querySelector('.modal-form-stars-text')
+	let rating = 0
+
+	const ratingMessages = [
+		'Очень плохо',
+		'Плохо',
+		'Нормально',
+		'Хорошо',
+		'Отлично',
+	]
+
+	// Відкриття модалки відгуку
+	reviewBtn.addEventListener('click', () => {
+		reviewModal.style.display = 'flex'
+		disableScroll()
+	})
+
+	// Закриття всіх модалок при кліку на хрестик
+	closeButtons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			reviewModal.style.display = 'none'
+			thanksModal.style.display = 'none'
+			cartModal.style.display = 'none'
+			enableScroll()
+		})
+	})
+
+	// Закриття модалки при кліку поза її вмістом
+	;[reviewModal, thanksModal].forEach(modal => {
+		modal.addEventListener('click', e => {
+			if (e.target === modal) {
+				modal.style.display = 'none'
+				enableScroll()
+			}
+		})
+	})
+
+	// Вибір рейтингу та оновлення зірок і тексту
+	stars.forEach((star, index) => {
+		star.addEventListener('click', () => {
+			rating = star.dataset.value
+
+			stars.forEach((s, i) => {
+				const path = s.querySelector('path')
+				if (i < rating) {
+					path.setAttribute('fill', '#F4B70B') // заповнена
+					path.removeAttribute('stroke')
+				} else {
+					path.setAttribute('fill', 'none') // порожня
+					path.setAttribute('stroke', '#F4B70B')
+					path.setAttribute('stroke-width', '3')
+				}
+			})
+
+			// Оновлюємо текст нижче зірок
+			ratingText.textContent = ratingMessages[rating - 1]
+		})
+	})
+
+	// Відправка форми відгуку
+	document.getElementById('reviewForm').addEventListener('submit', e => {
+		e.preventDefault()
+		reviewModal.style.display = 'none'
+		thanksModal.style.display = 'flex'
+		// скрол залишається забороненим для thanksModal
+	})
+
+	// ==========================
+	// Модалка корзини
+	// ==========================
+	const cartBtns = document.querySelectorAll('.open-cart')
+	const cartModal = document.getElementById('cartModal')
+
+	cartBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			cartModal.style.display = 'flex'
+			disableScroll()
+		})
+	})
+
+	// Закриття модалки корзини при кліку поза її вмістом
+	cartModal.addEventListener('click', e => {
+		if (e.target === cartModal) {
+			cartModal.style.display = 'none'
+			enableScroll()
+		}
+	})
+</script>
+
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

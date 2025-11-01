@@ -1,0 +1,151 @@
+<section class="checkout">
+	<div class="checkout__left">
+		<div class="checkout__block">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+				<li class="breadcrumbs__item">
+					<img src="./img/chev-right.svg" alt="" />
+				</li>
+				<li class="breadcrumbs__item">Оформление заказа</li>
+			</ul>
+			<h1 class="checkout__title">Оформление заказа</h1>
+			<div class="checkout__switcher">
+				<button class="checkout__switch active">Я покупаю впервые</button>
+				<button class="checkout__switch">Я уже зарегистрирован</button>
+			</div>
+			<div class="checkout__first">
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Контактная информация</h2>
+					<input type="text" placeholder="Имя и фамилия" />
+					<div class="checkout__row">
+						<input type="text" placeholder="Телефон" />
+						<input type="text" placeholder="Электронная почта" />
+					</div>
+					<span class="checkout__descr"
+						>Телефон и почта нужны для подтверждения заказа и его дальнейшего
+						отслеживания</span
+					>
+				</div>
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Способ доставки</h2>
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-vd" />
+						<span class="custom-checkbox"></span>
+						Самовивіз Великодолинське
+						<img class="delivery-option-img" src="./img/d-1.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-kyiv" />
+						<span class="custom-checkbox"></span>
+						Самовивіз Київ
+						<img class="delivery-option-img" src="./img/d-2.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="nova-poshta" />
+						<span class="custom-checkbox"></span>
+						Доставка на склад Нової Пошти
+						<img class="delivery-option-img" src="./img/d-3.svg" alt="" />
+					</label>
+					<div class="checkout__row nova-poshta-branch" id="nova-poshta-branch">
+						<input type="text" placeholder="Город" />
+						<input type="text" placeholder="Отделение Новой Почты" />
+					</div>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="delivery-warehouse" />
+						<span class="custom-checkbox"></span>
+						Доставка на склад Delivery
+						<img class="delivery-option-img" src="./img/d-4.svg" alt="" />
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="courier" />
+						<span class="custom-checkbox"></span>
+						Адресна доставка кур'єром
+						<img class="delivery-option-img" src="./img/d-5.svg" alt="" />
+					</label>
+				</div>
+				<div class="checkout__sub-block">
+					<h2 class="checkout__subtitle">Способ оплаты</h2>
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-vd" />
+						<span class="custom-checkbox"></span>
+						Безналичный расчет ( в том числе с НДС)
+					</label>
+
+					<label class="delivery-option">
+						<input type="checkbox" id="pickup-kyiv" />
+						<span class="custom-checkbox"></span>
+						Онлайн оплата
+					</label>
+				</div>
+			</div>
+			<div class="checkout__second">
+				<div class="checkout__sub-block">
+					<input type="text" placeholder="Электронная почта" />
+					<input type="text" placeholder="Пароль" />
+					<div class="checkout__sub-block-bottom">
+						<button class="btn">Войти</button>
+						<a href="#">Напомнить пароль</a>
+					</div>
+				</div>
+				<div class="checkout__create-acc">
+					<img src="./img/key.png" alt="" />
+					<p>Покупаете впервые?</p>
+					<a href="#">Создайте новый аккаунт</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="checkout__right">
+		<div class="checkout__block">
+			<h2 class="checkout__subtitle">Содержимое заказа</h2>
+			<ul class="checkout__products">
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-1.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Опрыскиватель аккумуляторный "Литолан" 5л</p>
+						<span>950 ₴</span>
+						<span>1 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-2.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Емкость для воды вертикальная, две горловины, 10000 л</p>
+						<span>40 000 ₴</span>
+						<span>1 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-3.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Пластиковая канистра Litolan с носиком для ГСМ, 20л</p>
+						<span>460 ₴</span>
+						<span>2 шт</span>
+					</div>
+				</li>
+				<li class="checkout__product">
+					<img class="checkout__product-img" src="./img/cart-4.png" alt="" />
+					<div class="checkout__product-info">
+						<p>Пластиковая канистра пищевая Litolan, 10 л</p>
+						<span>95 ₴</span>
+						<span>5 шт</span>
+					</div>
+				</li>
+			</ul>
+			<div class="checkout__message">
+				<img src="./img/transit.svg" alt="" />
+				Предлагаем самые выгодные условия доставки на рынке
+			</div>
+			<p class="checkout__result">Итого к оплате: 35 000 ₴</p>
+			<button class="checkout__btn">Оформить заказ</button>
+			<div class="checkout__description">
+				<p>Совершая регистрацию, вы соглашаетесь</p>
+				<a href="#">пользовательским соглашением</a>
+			</div>
+		</div>
+	</div>
+</section>
