@@ -35,6 +35,10 @@
 		}
 	}
 
+	.breadcrumbs {
+		margin-bottom: 0;
+	}
+
 	&__title {
 		@include text-style(36px, 500, 44px);
 		@media (max-width: 767px) {
@@ -214,6 +218,7 @@
 	}
 
 	&__block {
+		position: relative;
 		width: 100%;
 		@include flex(column, flex-start, flex-start, 20px);
 		padding: 32px;
@@ -222,7 +227,25 @@
 		background: $white;
 		@media (max-width: 767px) {
 			gap: 12px;
-			padding: 12px;
+			padding: 20px 12px;
+		}
+	}
+
+	&__change {
+		position: absolute;
+		top: 32px;
+		right: 32px;
+		color: $green;
+		@include text-style(16px, 400, 20px);
+		text-decoration-line: underline;
+		text-decoration-style: solid;
+		text-decoration-skip-ink: auto;
+		text-decoration-thickness: auto;
+		text-underline-offset: auto;
+		@media (max-width: 767px) {
+			top: 12px;
+			right: 8px;
+			@include text-style(14px, 400, 16px);
 		}
 	}
 

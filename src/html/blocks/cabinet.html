@@ -1,0 +1,275 @@
+<section class="cabinet">
+	<div class="cabinet__left">
+		<div class="cabinet__block">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+				<li class="breadcrumbs__item">
+					<img src="./img/pag-right.svg" alt="" />
+				</li>
+				<li class="breadcrumbs__item">Персональный кабинет</li>
+			</ul>
+			<h1 class="cabinet__title">Персональный кабинет</h1>
+			<p class="cabinet__text">
+				Добро пожаловать в ваш личный кабинет. Здесь вы можете изменить личные
+				данные, а также просмотреть историю ваших заказов. Для этого
+				воспользуйтесь навигацией ниже
+			</p>
+			<div class="cabinet__switcher">
+				<button class="cabinet__switch active">Личные данные</button>
+				<button class="cabinet__switch">Мои заказы</button>
+			</div>
+			<div class="cabinet__block-first">
+				<form class="cabinet__sub-block">
+					<h2>Личные данные</h2>
+					<div class="cabinet__row">
+						<input type="text" placeholder="Имя и фамилия" />
+						<input type="text" placeholder="Город" />
+					</div>
+					<div class="cabinet__row">
+						<input type="text" placeholder="Телефон" />
+						<input type="text" placeholder="Электронная почта" />
+					</div>
+					<button class="cabinet__btn">Сохранить изменения</button>
+				</form>
+				<form class="cabinet__sub-block">
+					<h2>Пароль</h2>
+					<input placeholder="Старый пароль" type="password" required />
+					<div class="cabinet__row">
+						<input placeholder="Новый пароль" type="password" required />
+						<input
+							placeholder="Повторите новый пароль"
+							type="password"
+							required
+						/>
+					</div>
+					<button class="cabinet__btn" disabled>Изменить пароль</button>
+				</form>
+				<form class="cabinet__sub-block">
+					<h2>Адрес для доставки курьером</h2>
+					<input
+						style="width: 100%"
+						type="text"
+						placeholder="Укажите полный адрес"
+					/>
+					<button class="cabinet__btn" disabled>Сохранить изменения</button>
+				</form>
+			</div>
+			<div class="cabinet__block-second">
+				<ul class="cabinet__history">
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42396</p>
+							<span>31 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-3.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--label">+1</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p>В пути</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42394</p>
+							<span>30 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p>Обрабатывается</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42395</p>
+							<span>29 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p class="success">Доставлен</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42393</p>
+							<span>28 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs disabled">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-3.png" alt="" />
+								</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p class="cancel">Отменен</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42392</p>
+							<span>27 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p class="success">Доставлен</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42391</p>
+							<span>26 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-3.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--label">+5</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p class="success">Доставлен</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+					<li class="cabinet__history-item">
+						<div class="cabinet__history-item--left">
+							<p>Заказ №42390</p>
+							<span>25 марта 2025</span>
+						</div>
+						<div class="cabinet__history-item--right">
+							<ul class="cabinet__history-item--imgs">
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-1.png" alt="" />
+								</li>
+								<li class="cabinet__history-item--img">
+									<img src="./img/cart-2.png" alt="" />
+								</li>
+							</ul>
+							<div class="cabinet__history-item--status">
+								<p class="success">Доставлен</p>
+								<span></span>
+								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="cabinet__right">
+		<img class="cabinet__img-first" src="./img/cabinet-1.png" alt="" />
+		<img class="cabinet__img-second" src="./img/cabinet-2.png" alt="" />
+	</div>
+</section>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const switches = document.querySelectorAll('.cabinet__switch')
+		const blockFirst = document.querySelector('.cabinet__block-first')
+		const blockSecond = document.querySelector('.cabinet__block-second')
+		const imgFirst = document.querySelector('.cabinet__img-first')
+		const imgSecond = document.querySelector('.cabinet__img-second')
+
+		// --- Перемикач блоків ---
+		switches.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				switches.forEach(b => b.classList.remove('active'))
+				btn.classList.add('active')
+
+				if (index === 0) {
+					blockFirst.style.display = 'flex'
+					blockSecond.style.display = 'none'
+					imgFirst.style.display = 'flex'
+					imgSecond.style.display = 'none'
+				} else {
+					blockFirst.style.display = 'none'
+					blockSecond.style.display = 'flex'
+					imgFirst.style.display = 'none'
+					imgSecond.style.display = 'flex'
+				}
+			})
+		})
+
+		// --- Розблокування кнопок при заповненні всіх полів ---
+		const forms = document.querySelectorAll('.cabinet__sub-block')
+
+		forms.forEach(form => {
+			const inputs = form.querySelectorAll('input')
+			const button = form.querySelector('.cabinet__btn')
+
+			// Якщо кнопка заблокована — додаємо перевірку
+			if (button && button.disabled) {
+				form.addEventListener('input', () => {
+					let allFilled = true
+					inputs.forEach(input => {
+						if (input.value.trim() === '') {
+							allFilled = false
+						}
+					})
+					button.disabled = !allFilled
+				})
+			}
+		})
+	})
+</script>
