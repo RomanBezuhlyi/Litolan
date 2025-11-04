@@ -244,7 +244,7 @@
 			<a href="#"><img src="./img/heart.svg" alt="" /></a>
 		</li>
 		<li class="bottom-menu__list">
-			<a href="#"><img src="./img/cart.svg" alt="" /></a>
+			<a href="#" class="open-cart"><img src="./img/cart.svg" alt="" /></a>
 		</li>
 	</ul>
 </div>
@@ -2249,113 +2249,6 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	// Функції для блокування/розблокування скролу
-	function disableScroll() {
-		document.body.style.overflow = 'hidden'
-	}
-
-	function enableScroll() {
-		document.body.style.overflow = ''
-	}
-
-	// ==========================
-	// Модалка відгуку
-	// ==========================
-	const reviewBtn = document.querySelector('.reviews__btn')
-	const reviewModal = document.getElementById('reviewModal')
-	const thanksModal = document.getElementById('thanksModal')
-	const closeButtons = document.querySelectorAll('.close')
-	const stars = document.querySelectorAll('.stars .star')
-	const ratingText = document.querySelector('.modal-form-stars-text')
-	let rating = 0
-
-	const ratingMessages = [
-		'Очень плохо',
-		'Плохо',
-		'Нормально',
-		'Хорошо',
-		'Отлично',
-	]
-
-	// Відкриття модалки відгуку
-	reviewBtn.addEventListener('click', () => {
-		reviewModal.style.display = 'flex'
-		disableScroll()
-	})
-
-	// Закриття всіх модалок при кліку на хрестик
-	closeButtons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			reviewModal.style.display = 'none'
-			thanksModal.style.display = 'none'
-			cartModal.style.display = 'none'
-			enableScroll()
-		})
-	})
-
-	// Закриття модалки при кліку поза її вмістом
-	;[reviewModal, thanksModal].forEach(modal => {
-		modal.addEventListener('click', e => {
-			if (e.target === modal) {
-				modal.style.display = 'none'
-				enableScroll()
-			}
-		})
-	})
-
-	// Вибір рейтингу та оновлення зірок і тексту
-	stars.forEach((star, index) => {
-		star.addEventListener('click', () => {
-			rating = star.dataset.value
-
-			stars.forEach((s, i) => {
-				const path = s.querySelector('path')
-				if (i < rating) {
-					path.setAttribute('fill', '#F4B70B') // заповнена
-					path.removeAttribute('stroke')
-				} else {
-					path.setAttribute('fill', 'none') // порожня
-					path.setAttribute('stroke', '#F4B70B')
-					path.setAttribute('stroke-width', '3')
-				}
-			})
-
-			// Оновлюємо текст нижче зірок
-			ratingText.textContent = ratingMessages[rating - 1]
-		})
-	})
-
-	// Відправка форми відгуку
-	document.getElementById('reviewForm').addEventListener('submit', e => {
-		e.preventDefault()
-		reviewModal.style.display = 'none'
-		thanksModal.style.display = 'flex'
-		// скрол залишається забороненим для thanksModal
-	})
-
-	// ==========================
-	// Модалка корзини
-	// ==========================
-	const cartBtns = document.querySelectorAll('.open-cart')
-	const cartModal = document.getElementById('cartModal')
-
-	cartBtns.forEach(btn => {
-		btn.addEventListener('click', () => {
-			cartModal.style.display = 'flex'
-			disableScroll()
-		})
-	})
-
-	// Закриття модалки корзини при кліку поза її вмістом
-	cartModal.addEventListener('click', e => {
-		if (e.target === cartModal) {
-			cartModal.style.display = 'none'
-			enableScroll()
-		}
-	})
-</script>
 
 		</div>
 		<script

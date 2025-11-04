@@ -1,6 +1,7 @@
 import { initAccordion } from './modules/accordion'
 import { initAssortment } from './modules/assortment'
 import { initCloseBanner } from './modules/banner'
+import { initCabinet } from './modules/cabinet'
 import { initCatalog } from './modules/catalog'
 import { initCheckbox } from './modules/checkbox'
 import { initCheckout } from './modules/checkout'
@@ -8,6 +9,7 @@ import { initDropDown } from './modules/dropdown'
 import { initFaq } from './modules/faq'
 import { initMobileFilter } from './modules/filter'
 import { initMobileMenu, initMobileSearch } from './modules/menu'
+import { initModals } from './modules/modal'
 import { initQuantity } from './modules/quantity'
 import { initDropSort } from './modules/sort'
 import {
@@ -43,4 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initQuantity()
 	initAccordion()
 	initCheckout()
+	initModals()
+	initCabinet()
 })

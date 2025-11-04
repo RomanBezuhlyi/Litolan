@@ -17,7 +17,7 @@ export function initCheckout() {
 	const novaPoshtaCheckbox = document.getElementById('nova-poshta')
 	const novaPoshtaBranch = document.getElementById('nova-poshta-branch')
 
-	if (novaPoshtaCheckbox) {
+	if (novaPoshtaCheckbox && novaPoshtaBranch) {
 		novaPoshtaCheckbox.addEventListener('change', () => {
 			novaPoshtaBranch.style.display = novaPoshtaCheckbox.checked
 				? 'flex'
@@ -25,28 +25,31 @@ export function initCheckout() {
 		})
 	}
 
+	// перемикачі між блоками
 	const switchButtons = document.querySelectorAll('.checkout__switch')
 	const firstBlock = document.querySelector('.checkout__first')
 	const secondBlock = document.querySelector('.checkout__second')
 
-	switchButtons.forEach((btn, index) => {
-		btn.addEventListener('click', () => {
-			// прибираємо active у всіх
-			switchButtons.forEach(b => b.classList.remove('active'))
-			btn.classList.add('active')
+	if (switchButtons.length && firstBlock && secondBlock) {
+		switchButtons.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				// прибираємо active у всіх
+				switchButtons.forEach(b => b.classList.remove('active'))
+				btn.classList.add('active')
 
-			// показуємо потрібний блок
-			if (index === 0) {
-				firstBlock.style.display = 'flex'
-				secondBlock.style.display = 'none'
-			} else {
-				firstBlock.style.display = 'none'
-				secondBlock.style.display = 'flex'
-			}
+				// показуємо потрібний блок
+				if (index === 0) {
+					firstBlock.style.display = 'flex'
+					secondBlock.style.display = 'none'
+				} else {
+					firstBlock.style.display = 'none'
+					secondBlock.style.display = 'flex'
+				}
+			})
 		})
-	})
 
-	// початковий стан
-	firstBlock.style.display = 'flex'
-	secondBlock.style.display = 'none'
+		// початковий стан
+		firstBlock.style.display = 'flex'
+		secondBlock.style.display = 'none'
+	}
 }

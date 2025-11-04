@@ -238,7 +238,7 @@
 			<a href="#"><img src="./img/heart.svg" alt="" /></a>
 		</li>
 		<li class="bottom-menu__list">
-			<a href="#"><img src="./img/cart.svg" alt="" /></a>
+			<a href="#" class="open-cart"><img src="./img/cart.svg" alt="" /></a>
 		</li>
 	</ul>
 </div>
@@ -566,56 +566,6 @@
 		<img class="cabinet__img-second" src="./img/cabinet-2.png" alt="" />
 	</div>
 </section>
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const switches = document.querySelectorAll('.cabinet__switch')
-		const blockFirst = document.querySelector('.cabinet__block-first')
-		const blockSecond = document.querySelector('.cabinet__block-second')
-		const imgFirst = document.querySelector('.cabinet__img-first')
-		const imgSecond = document.querySelector('.cabinet__img-second')
-
-		// --- Перемикач блоків ---
-		switches.forEach((btn, index) => {
-			btn.addEventListener('click', () => {
-				switches.forEach(b => b.classList.remove('active'))
-				btn.classList.add('active')
-
-				if (index === 0) {
-					blockFirst.style.display = 'flex'
-					blockSecond.style.display = 'none'
-					imgFirst.style.display = 'flex'
-					imgSecond.style.display = 'none'
-				} else {
-					blockFirst.style.display = 'none'
-					blockSecond.style.display = 'flex'
-					imgFirst.style.display = 'none'
-					imgSecond.style.display = 'flex'
-				}
-			})
-		})
-
-		// --- Розблокування кнопок при заповненні всіх полів ---
-		const forms = document.querySelectorAll('.cabinet__sub-block')
-
-		forms.forEach(form => {
-			const inputs = form.querySelectorAll('input')
-			const button = form.querySelector('.cabinet__btn')
-
-			// Якщо кнопка заблокована — додаємо перевірку
-			if (button && button.disabled) {
-				form.addEventListener('input', () => {
-					let allFilled = true
-					inputs.forEach(input => {
-						if (input.value.trim() === '') {
-							allFilled = false
-						}
-					})
-					button.disabled = !allFilled
-				})
-			}
-		})
-	})
-</script>
 </main>
 			<footer class="footer">
 	<div class="footer__top">
@@ -1053,113 +1003,6 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	// Функції для блокування/розблокування скролу
-	function disableScroll() {
-		document.body.style.overflow = 'hidden'
-	}
-
-	function enableScroll() {
-		document.body.style.overflow = ''
-	}
-
-	// ==========================
-	// Модалка відгуку
-	// ==========================
-	const reviewBtn = document.querySelector('.reviews__btn')
-	const reviewModal = document.getElementById('reviewModal')
-	const thanksModal = document.getElementById('thanksModal')
-	const closeButtons = document.querySelectorAll('.close')
-	const stars = document.querySelectorAll('.stars .star')
-	const ratingText = document.querySelector('.modal-form-stars-text')
-	let rating = 0
-
-	const ratingMessages = [
-		'Очень плохо',
-		'Плохо',
-		'Нормально',
-		'Хорошо',
-		'Отлично',
-	]
-
-	// Відкриття модалки відгуку
-	reviewBtn.addEventListener('click', () => {
-		reviewModal.style.display = 'flex'
-		disableScroll()
-	})
-
-	// Закриття всіх модалок при кліку на хрестик
-	closeButtons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			reviewModal.style.display = 'none'
-			thanksModal.style.display = 'none'
-			cartModal.style.display = 'none'
-			enableScroll()
-		})
-	})
-
-	// Закриття модалки при кліку поза її вмістом
-	;[reviewModal, thanksModal].forEach(modal => {
-		modal.addEventListener('click', e => {
-			if (e.target === modal) {
-				modal.style.display = 'none'
-				enableScroll()
-			}
-		})
-	})
-
-	// Вибір рейтингу та оновлення зірок і тексту
-	stars.forEach((star, index) => {
-		star.addEventListener('click', () => {
-			rating = star.dataset.value
-
-			stars.forEach((s, i) => {
-				const path = s.querySelector('path')
-				if (i < rating) {
-					path.setAttribute('fill', '#F4B70B') // заповнена
-					path.removeAttribute('stroke')
-				} else {
-					path.setAttribute('fill', 'none') // порожня
-					path.setAttribute('stroke', '#F4B70B')
-					path.setAttribute('stroke-width', '3')
-				}
-			})
-
-			// Оновлюємо текст нижче зірок
-			ratingText.textContent = ratingMessages[rating - 1]
-		})
-	})
-
-	// Відправка форми відгуку
-	document.getElementById('reviewForm').addEventListener('submit', e => {
-		e.preventDefault()
-		reviewModal.style.display = 'none'
-		thanksModal.style.display = 'flex'
-		// скрол залишається забороненим для thanksModal
-	})
-
-	// ==========================
-	// Модалка корзини
-	// ==========================
-	const cartBtns = document.querySelectorAll('.open-cart')
-	const cartModal = document.getElementById('cartModal')
-
-	cartBtns.forEach(btn => {
-		btn.addEventListener('click', () => {
-			cartModal.style.display = 'flex'
-			disableScroll()
-		})
-	})
-
-	// Закриття модалки корзини при кліку поза її вмістом
-	cartModal.addEventListener('click', e => {
-		if (e.target === cartModal) {
-			cartModal.style.display = 'none'
-			enableScroll()
-		}
-	})
-</script>
 
 		</div>
 		<script
