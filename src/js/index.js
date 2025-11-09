@@ -5,10 +5,15 @@ import { initCabinet } from './modules/cabinet'
 import { initCatalog } from './modules/catalog'
 import { initCheckbox } from './modules/checkbox'
 import { initCheckout } from './modules/checkout'
+import { initCheckoutDrop } from './modules/checkoutDrop'
 import { initDropDown } from './modules/dropdown'
+import { initFancybox } from './modules/fancybox'
 import { initFaq } from './modules/faq'
 import { initMobileFilter } from './modules/filter'
-import { initMobileMenu, initMobileSearch } from './modules/menu'
+import { initMobileList } from './modules/footer'
+import { initMenuDropdown } from './modules/initMenuDriodown'
+import { initPhoneMask } from './modules/mask'
+import { initMobileMenu } from './modules/menu'
 import { initModals } from './modules/modal'
 import { initQuantity } from './modules/quantity'
 import { initDropSort } from './modules/sort'
@@ -24,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCloseBanner()
 	initDropDown()
 	initMobileMenu()
-	initMobileSearch()
 	initMainSwiper()
 	initPlayVideo()
 	initCatalog()
@@ -47,4 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCheckout()
 	initModals()
 	initCabinet()
+	initMobileList()
+	initCheckoutDrop()
+	initPhoneMask()
+	initFancybox()
+	initMenuDropdown()
 })

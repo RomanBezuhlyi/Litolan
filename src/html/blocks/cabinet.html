@@ -4,7 +4,7 @@
 			<ul class="breadcrumbs">
 				<li class="breadcrumbs__item"><a href="#">Главная</a></li>
 				<li class="breadcrumbs__item">
-					<img src="./img/pag-right.svg" alt="" />
+					<img src="./img/chev-right.svg" alt="" />
 				</li>
 				<li class="breadcrumbs__item">Персональный кабинет</li>
 			</ul>
@@ -26,7 +26,7 @@
 						<input type="text" placeholder="Город" />
 					</div>
 					<div class="cabinet__row">
-						<input type="text" placeholder="Телефон" />
+						<input type="text" placeholder="Телефон" data-phone-input />
 						<input type="text" placeholder="Электронная почта" />
 					</div>
 					<button class="cabinet__btn">Сохранить изменения</button>
@@ -58,10 +58,10 @@
 				<ul class="cabinet__history">
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42396</p>
-							<span>31 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42396</p>
+								<span>31 марта 2025</span>
+							</div>
 							<ul class="cabinet__history-item--imgs">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -74,19 +74,19 @@
 								</li>
 								<li class="cabinet__history-item--label">+1</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p>В пути</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p>В пути</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42394</p>
-							<span>30 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42394</p>
+								<span>30 марта 2025</span>
+							</div>
 							<ul class="cabinet__history-item--imgs">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -95,19 +95,19 @@
 									<img src="./img/cart-2.png" alt="" />
 								</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p>Обрабатывается</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p>Обрабатывается</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42395</p>
-							<span>29 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42395</p>
+								<span>29 марта 2025</span>
+							</div>
 							<ul class="cabinet__history-item--imgs">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -116,19 +116,19 @@
 									<img src="./img/cart-2.png" alt="" />
 								</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p class="success">Доставлен</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p class="success">Доставлен</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42393</p>
-							<span>28 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42393</p>
+								<span>28 марта 2025</span>
+							</div>
 							<ul class="cabinet__history-item--imgs disabled">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -140,40 +140,19 @@
 									<img src="./img/cart-3.png" alt="" />
 								</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p class="cancel">Отменен</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p class="cancel">Отменен</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42392</p>
-							<span>27 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
-							<ul class="cabinet__history-item--imgs">
-								<li class="cabinet__history-item--img">
-									<img src="./img/cart-1.png" alt="" />
-								</li>
-								<li class="cabinet__history-item--img">
-									<img src="./img/cart-2.png" alt="" />
-								</li>
-							</ul>
-							<div class="cabinet__history-item--status">
-								<p class="success">Доставлен</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42396</p>
+								<span>31 марта 2025</span>
 							</div>
-						</div>
-					</li>
-					<li class="cabinet__history-item">
-						<div class="cabinet__history-item--left">
-							<p>Заказ №42391</p>
-							<span>26 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
 							<ul class="cabinet__history-item--imgs">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -184,21 +163,21 @@
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-3.png" alt="" />
 								</li>
-								<li class="cabinet__history-item--label">+5</li>
+								<li class="cabinet__history-item--label">+1</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p class="success">Доставлен</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p>В пути</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 					<li class="cabinet__history-item">
 						<div class="cabinet__history-item--left">
-							<p>Заказ №42390</p>
-							<span>25 марта 2025</span>
-						</div>
-						<div class="cabinet__history-item--right">
+							<div class="cabinet__history-item--info">
+								<p>Заказ №42394</p>
+								<span>30 марта 2025</span>
+							</div>
 							<ul class="cabinet__history-item--imgs">
 								<li class="cabinet__history-item--img">
 									<img src="./img/cart-1.png" alt="" />
@@ -207,11 +186,11 @@
 									<img src="./img/cart-2.png" alt="" />
 								</li>
 							</ul>
-							<div class="cabinet__history-item--status">
-								<p class="success">Доставлен</p>
-								<span></span>
-								<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
-							</div>
+						</div>
+						<div class="cabinet__history-item--status">
+							<p>Обрабатывается</p>
+							<span></span>
+							<a href="#"><img src="./img/pag-right.svg" alt="" /></a>
 						</div>
 					</li>
 				</ul>

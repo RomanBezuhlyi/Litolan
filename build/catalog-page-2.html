@@ -28,6 +28,12 @@
 			rel="stylesheet"
 		/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+		<!-- Fancybox 5 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
 
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
@@ -51,8 +57,9 @@
 					</a>
 					<div class="dropdown__menu">
 						<ul class="dropdown__menu-list">
-							<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
-							<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
+							<li class="dropdown__menu-item"><a href="#">Оплата</a></li>
+							<li class="dropdown__menu-item"><a href="#">Производство</a></li>
+							<li class="dropdown__menu-item"><a href="#">Паспорта</a></li>
 						</ul>
 					</div>
 				</div>
@@ -147,110 +154,60 @@
 		</div>
 	</div>
 	<div class="header-mobile">
-		<button class="header-mobile__left open-catalog">
-			<img src="./img/dots.svg" alt="" />
-			Каталог
-		</button>
-		<a class="header-mobile__center" href="#"
-			><img src="./img/logo.svg" alt=""
-		/></a>
-		<div class="header-mobile__right">
-			<button class="header-mobile__search">
-				<img src="./img/search.svg" alt="" />
+		<div class="header-mobile__top">
+			<a class="header-mobile__logo" href="#"
+				><img src="./img/logo.svg" alt=""
+			/></a>
+			<div class="header__bottom-right">
+				<div class="header__bottom-currency">
+					<div class="dropdown">
+						<a href="#" class="dropdown__toggle">
+							<img src="./img/currency.svg" alt="" />
+							<img class="chev" src="./img/chev.svg" alt="" />
+						</a>
+						<div class="dropdown__menu lang">
+							<ul class="dropdown__menu-list">
+								<li class="dropdown__menu-item"><a href="#">USD</a></li>
+								<li class="dropdown__menu-item"><a href="#">UAH</a></li>
+								<li class="dropdown__menu-item"><a href="#">EUR</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<button class="header__bottom-user">
+					<img src="./img/user.svg" alt="" />
+				</button>
+				<button class="header__bottom-heart">
+					<img src="./img/heart.svg" alt="" />
+					<img class="mark" src="./img/red-dot.svg" alt="" />
+				</button>
+				<button class="header__bottom-cart open-cart">
+					<div class="header__bottom-cart--img">
+						<img class="cart" src="./img/cart.svg" alt="" />
+						<img class="mark" src="./img/red-dot.svg" alt="" />
+					</div>
+					<span>3 товара, 5 780 ₴</span>
+				</button>
+			</div>
+		</div>
+		<div class="header-mobile__bottom">
+			<button class="header__bottom-catalog open-catalog">
+				<img src="./img/dots.svg" alt="" />
+				Каталог
 			</button>
+			<div class="header__bottom-search">
+				<img class="search" src="./img/search.svg" alt="" />
+				<input type="text" placeholder="Поиск" />
+			</div>
 			<button class="header-mobile__burger">
-				<img src="./img/burger.svg" alt="" />
+				<img src="./img/butger.svg" alt="" />
 			</button>
 		</div>
-	</div>
-	<div class="header-mobile-menu">
-		<nav class="header-mobile-menu__nav">
-			<div class="dropdown">
-				<a href="#" class="dropdown__toggle">
-					Информация
-					<img class="chev" src="./img/chev.svg" alt="" />
-				</a>
-				<div class="dropdown__menu">
-					<ul class="dropdown__menu-list">
-						<li class="dropdown__menu-item"><a href="#">Про компанію</a></li>
-						<li class="dropdown__menu-item"><a href="#">Про директора</a></li>
-					</ul>
-				</div>
-			</div>
-			<a href="#">Доставка</a>
-			<a href="#"><img src="./img/exel.svg" alt="" />Прайс</a>
-			<a href="#">Контакты</a>
-			<div class="dropdown">
-				<a href="#" class="dropdown__toggle">
-					Ru
-					<img class="chev" src="./img/chev.svg" alt="" />
-				</a>
-				<div class="dropdown__menu">
-					<ul class="dropdown__menu-list">
-						<li class="dropdown__menu-item"><a href="#">Ua</a></li>
-						<li class="dropdown__menu-item"><a href="#">En</a></li>
-					</ul>
-				</div>
-			</div>
-			<a href="#"
-				><img class="viber" src="./img/viber.svg" alt="" /> (067) 347 75 41</a
-			>
-			<a href="#">(067) 451 20 31</a>
-			<div class="dropdown">
-				<a href="#" class="dropdown__toggle">
-					Одесса
-					<img class="chev" src="./img/chev.svg" alt="" />
-				</a>
-				<div class="dropdown__menu">
-					<ul class="dropdown__menu-list">
-						<li class="dropdown__menu-item"><a href="#">Киев</a></li>
-						<li class="dropdown__menu-item"><a href="#">Харьков</a></li>
-						<li class="dropdown__menu-item"><a href="#">Винница</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div class="header__bottom-currency">
-			<div class="dropdown">
-				<a href="#" class="dropdown__toggle">
-					<img src="./img/currency.svg" alt="" />
-					<img class="chev" src="./img/chev.svg" alt="" />
-				</a>
-				<div class="dropdown__menu lang">
-					<ul class="dropdown__menu-list">
-						<li class="dropdown__menu-item"><a href="#">USD</a></li>
-						<li class="dropdown__menu-item"><a href="#">UAH</a></li>
-						<li class="dropdown__menu-item"><a href="#">EUR</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<button class="header__btn">
-			<img src="./img/phone.svg" alt="" /> <span>Заказать звонок</span>
-		</button>
-		<p class="header__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
-	</div>
-
-	<div class="header-mobile-search">
-		<input type="text" placeholder="Поиск" />
 	</div>
 </header>
-<div class="bottom-menu">
-	<ul class="bottom-menu__list">
-		<li class="bottom-menu__list">
-			<a href="#"><img src="./img/user.svg" alt="" /></a>
-		</li>
-		<li class="bottom-menu__list">
-			<a href="#"><img src="./img/heart.svg" alt="" /></a>
-		</li>
-		<li class="bottom-menu__list">
-			<a href="#" class="open-cart"><img src="./img/cart.svg" alt="" /></a>
-		</li>
-	</ul>
-</div>
 <div class="catalog__menu">
 	<div class="catalog__menu-col first">
-		<a class="catalog__menu-item" href="#">
+		<a class="catalog__menu-item active" href="#">
 			<img src="./img/m-1.svg" alt="" />
 			Пластиковые емкости
 		</a>
@@ -296,6 +253,9 @@
 		</a>
 	</div>
 	<div class="catalog__menu-col second">
+		<a class="catalog__menu-item--back" href="#"
+			><img src="./img/arrow-back.svg" alt="" />Пластиковые емкости</a
+		>
 		<a class="catalog__menu-item" href="#">Емкости по форме</a>
 		<a class="catalog__menu-item" href="#">Емкости по назначению</a>
 		<a class="catalog__menu-item" href="#">Трехслойные емкости</a>
@@ -304,6 +264,9 @@
 		<a class="catalog__menu-item" href="#">Бочки пластиковые</a>
 	</div>
 	<div class="catalog__menu-col third">
+		<a class="catalog__menu-item--back" href="#"
+			><img src="./img/arrow-back.svg" alt="" />Емкости по форме</a
+		>
 		<a class="catalog__menu-item second" href="#"
 			><img src="./img/cat-1.png" alt="" />Квадратные емкости</a
 		>
@@ -338,13 +301,54 @@
 				<p class="catalog__menu-product--text">5 000 литров, цена 31 999₴</p>
 				<div class="catalog__menu-product--panel">
 					<p class="catalog__menu-product--price">31 999₴</p>
-					<button class="catalog__menu-product--cart">
+					<button class="catalog__menu-product--cart open-cart">
 						<img src="./img/cart.svg" alt="" />
 					</button>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="menu">
+	<div class="menu__langs">
+		<button class="menu__lang active">Ру</button>
+		<button class="menu__lang">Укр</button>
+		<button class="menu__lang">Eng</button>
+	</div>
+	<nav class="menu__nav">
+		<div class="menu__nav-item-drop">
+			<div class="menu__nav-item-drop--top">
+				Информация <img src="./img/chev.svg" alt="" />
+			</div>
+			<ul class="menu__nav-item-drop--list">
+				<li><a href="#">Оплата</a></li>
+				<li><a href="#">Производство</a></li>
+				<li><a href="#">Паспорта</a></li>
+			</ul>
+		</div>
+		<a class="menu__nav-item" href="#">Доставка</a>
+		<a class="menu__nav-item" href="#">Контакты</a>
+		<a class="menu__nav-item" href="#"
+			><img src="./img/exel.svg" alt="" />Прайс</a
+		>
+	</nav>
+	<div class="menu__contacts">
+		<div class="menu__contacts-cities">
+			<a class="menu__contacts-city active" href="#">Одесса</a>
+			<a class="menu__contacts-city" href="#">Великодолинское</a>
+			<a class="menu__contacts-city" href="#">Киев</a>
+		</div>
+		<div class="menu__contacts-phones">
+			<a class="menu__contacts-phone" href="tel:0673477541"
+				><img src="./img/viber.svg" alt="" />(067) 347 75 41</a
+			>
+			<a class="menu__contacts-phone" href="tel:0674512031">(067) 451 20 31</a>
+		</div>
+		<button class="menu__contacts-order-call">
+			<img src="./img/phone.svg" alt="" />Заказать звонок
+		</button>
+	</div>
+	<p class="menu__schedule">Работаем ПН-ПТ, с 8:30 до 17:00</p>
 </div>
 
 			<main>
@@ -711,7 +715,6 @@
 			</li>
 			<li class="breadcrumbs__item">Пластиковые емкости</li>
 		</ul>
-		<button class="assortment__right-btn-filter">Фільтр</button>
 		<h1 class="assortment__right-title">Квадратные емкости</h1>
 		<div class="assortment__right-slider--wrap">
 			<button class="assortment__right-slider__prev">
@@ -796,6 +799,9 @@
 				</div>
 			</div>
 			<div class="assortment__right-sort">
+				<button class="assortment__right-btn-filter">
+					<img src="./img/Filter.svg" alt="" />
+				</button>
 				<div class="drop-sort" id="sortDropdown">
 					<button
 						class="drop-sort__toggle"
@@ -1837,6 +1843,7 @@
 	<div class="footer__middle">
 		<div class="footer__left">
 			<h5>Компания</h5>
+			<img class="footer__arrow" src="./img/chev.svg" alt="" />
 			<ul>
 				<li><a href="#">О нас</a></li>
 				<li><a href="#">Наши партнеры</a></li>
@@ -1852,6 +1859,7 @@
 		</div>
 		<div class="footer__center">
 			<h5>Производство</h5>
+			<img class="footer__arrow" src="./img/chev.svg" alt="" />
 			<ul>
 				<li><a href="#">Емкости для воды</a></li>
 				<li><a href="#">Емкости для септиков</a></li>
@@ -1870,6 +1878,7 @@
 		<div class="footer__right">
 			<div class="footer__right-top">
 				<h5>Помощь</h5>
+				<img class="footer__arrow" src="./img/chev.svg" alt="" />
 				<ul>
 					<li><a href="#">Оптовым покупателям</a></li>
 					<li><a href="#">Технологии производства</a></li>

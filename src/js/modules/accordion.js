@@ -1,8 +1,19 @@
 export function initAccordion() {
-	document.querySelectorAll('.product__accordion-item').forEach(item => {
+	const accordionItems = document.querySelectorAll('.product__accordion-item')
+	if (!accordionItems.length) return
+
+	accordionItems.forEach((item, index) => {
 		const top = item.querySelector('.product__accordion-item--top')
 		const bottom = item.querySelector('.product__accordion-item--bottom')
-		const arrow = top.querySelector('img')
+		const arrow = top ? top.querySelector('img') : null
+
+		if (!top || !bottom || !arrow) return
+
+		// ✅ Якщо це перший елемент — відкриваємо одразу
+		if (index === 0) {
+			bottom.style.maxHeight = bottom.scrollHeight + 'px'
+			arrow.style.transform = 'rotate(180deg)'
+		}
 
 		top.addEventListener('click', () => {
 			const isOpen = bottom.style.maxHeight && bottom.style.maxHeight !== '0px'

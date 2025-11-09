@@ -38,7 +38,7 @@ export function initCatalog() {
 			item.classList.add('active')
 
 			// показати другу колонку
-			catalog.querySelector('.catalog__menu-col.second').style.display = 'block'
+			catalog.querySelector('.catalog__menu-col.second').style.display = 'flex'
 			catalog.querySelector('.catalog__menu-col.third').style.display = 'none'
 		})
 	})
@@ -52,7 +52,7 @@ export function initCatalog() {
 			item.classList.add('active')
 
 			// показати третю колонку
-			catalog.querySelector('.catalog__menu-col.third').style.display = 'block'
+			catalog.querySelector('.catalog__menu-col.third').style.display = 'flex'
 		})
 	})
 
@@ -64,7 +64,38 @@ export function initCatalog() {
 			item.classList.add('active')
 
 			// показати четверту колонку
-			catalog.querySelector('.catalog__menu-col.fourth').style.display = 'block'
+			catalog.querySelector('.catalog__menu-col.fourth').style.display = 'flex'
+		})
+	})
+
+	// кнопки "назад" у другій і третій колонках
+	const backButtons = catalog.querySelectorAll('.catalog__menu-item--back')
+
+	backButtons.forEach(btn => {
+		btn.addEventListener('click', e => {
+			e.preventDefault()
+
+			// знаходимо, у якій колонці ця кнопка
+			const col = btn.closest('.catalog__menu-col')
+
+			if (col.classList.contains('third')) {
+				// якщо це третя колонка — сховати її, показати другу
+				col.style.display = 'none'
+				catalog.querySelector('.catalog__menu-col.second').style.display =
+					'flex'
+				// зняти активність з третьої колонки
+				catalog
+					.querySelectorAll('.catalog__menu-col.third .catalog__menu-item')
+					.forEach(i => i.classList.remove('active'))
+			} else if (col.classList.contains('second')) {
+				// якщо це друга колонка — сховати її, показати першу
+				col.style.display = 'none'
+				catalog.querySelector('.catalog__menu-col.first').style.display = 'flex'
+				// зняти активність з другої колонки
+				catalog
+					.querySelectorAll('.catalog__menu-col.second .catalog__menu-item')
+					.forEach(i => i.classList.remove('active'))
+			}
 		})
 	})
 }

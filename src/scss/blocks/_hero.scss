@@ -9,7 +9,7 @@
 		padding: 12px;
 	}
 	@media (max-width: 767px) {
-		padding: 8px;
+		padding: 8px 0 8px 8px;
 		border-radius: 12px;
 		gap: 12px;
 	}
@@ -25,14 +25,7 @@
 		background: $white;
 		padding: 12px;
 		@media (max-width: 767px) {
-			width: 200px;
-			padding: 8px;
-		}
-		@media (max-width: 480px) {
-			// display: none;
-			width: 100%;
-			flex-direction: row;
-			flex-wrap: wrap;
+			display: none;
 		}
 	}
 
@@ -76,7 +69,6 @@
 			height: 480px;
 		}
 		@media (max-width: 480px) {
-			width: 100% !important;
 			height: 450px;
 		}
 		& > .action {
@@ -136,7 +128,7 @@
 		@include text-style(24px, 500, 28px, center);
 		margin-bottom: 4px;
 		@media (max-width: 767px) {
-			@include text-style(18px, 500, 20px, center);
+			@include text-style(20px, 500, 24px, center);
 		}
 	}
 

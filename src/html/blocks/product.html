@@ -17,10 +17,12 @@
 			<button class="large-swiper-prev">
 				<img src="./img/chev-right.svg" alt="" />
 			</button>
+
 			<div class="large-swiper-marks-left">
 				<p class="action">Акция</p>
 				<p class="new">Новинка</p>
 			</div>
+
 			<div class="large-swiper-marks-right">
 				<button class="selected">
 					<img src="./img/heart-grey.svg" alt="" />
@@ -33,13 +35,19 @@
 
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="./img/bochka.png" alt="" />
+					<a href="./img/bochka.png" data-fancybox="gallery">
+						<img src="./img/bochka.png" alt="" />
+					</a>
 				</div>
 				<div class="swiper-slide">
-					<img src="./img/bochka.png" alt="" />
+					<a href="./img/bochka.png" data-fancybox="gallery">
+						<img src="./img/bochka.png" alt="" />
+					</a>
 				</div>
 				<div class="swiper-slide">
-					<img src="./img/bochka.png" alt="" />
+					<a href="./img/bochka.png" data-fancybox="gallery">
+						<img src="./img/bochka.png" alt="" />
+					</a>
 				</div>
 			</div>
 			<button class="large-swiper-next">
@@ -82,6 +90,49 @@
 				<a href="#">17 отзывов</a>
 			</li>
 		</ul>
+		<div class="large-slider swiper mobile">
+			<button class="large-swiper-prev desktop">
+				<img src="./img/chev-right.svg" alt="" />
+			</button>
+			<div class="large-swiper-marks-left">
+				<p class="action">Акция</p>
+				<p class="new">Новинка</p>
+			</div>
+			<div class="large-swiper-marks-right">
+				<button class="selected">
+					<img src="./img/heart-grey.svg" alt="" />
+					В избранное
+				</button>
+				<button class="threed">
+					<img src="./img/zoom.svg" alt="" />Посмотреть в 3D
+				</button>
+			</div>
+
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="./img/bochka.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./img/bochka.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./img/bochka.png" alt="" />
+				</div>
+			</div>
+			<button class="large-swiper-next desktop">
+				<img src="./img/chev-right.svg" alt="" />
+			</button>
+		</div>
+		<div class="large-swiper-nav">
+			<button class="large-swiper-prev mobile">
+				<img src="./img/chev-right.svg" alt="" />
+			</button>
+			<div class="large-swiper-pagination"></div>
+			<button class="large-swiper-next mobile">
+				<img src="./img/chev-right.svg" alt="" />
+			</button>
+		</div>
+
 		<div class="product__right-char">
 			<div class="product__right-char--left">
 				<h5>Комплектация</h5>
@@ -162,7 +213,7 @@
 					</button>
 				</div>
 				<form class="product-form">
-					<input type="text" placeholder="+38" required />
+					<input type="text" placeholder="+38" data-phone-input required />
 					<button type="submit">Купить в 1 клик</button>
 				</form>
 				<p class="product-desc">Отправка в течении 24 часов</p>

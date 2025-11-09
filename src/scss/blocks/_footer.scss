@@ -9,7 +9,6 @@
 	background: $green;
 	@media (max-width: 767px) {
 		padding: 8px;
-		margin-bottom: 75px;
 	}
 
 	&__top {
@@ -60,6 +59,7 @@
 	}
 
 	&__left {
+		position: relative;
 		@include box(33%, 348px);
 		@include flex(column, flex-start, flex-start);
 		padding: 20px;
@@ -70,8 +70,10 @@
 			width: 100%;
 		}
 		@media (max-width: 767px) {
-			height: auto;
+			max-height: 44px;
+			overflow: hidden;
 			padding: 12px;
+			@include transition;
 		}
 		h5 {
 			@include text-style(16px, 500, 20px);
@@ -87,6 +89,7 @@
 	}
 
 	&__center {
+		position: relative;
 		@include box(33%, 348px);
 		@include flex(column, flex-start, flex-start);
 		padding: 20px;
@@ -97,8 +100,10 @@
 			width: 100%;
 		}
 		@media (max-width: 767px) {
-			height: auto;
+			max-height: 44px;
+			overflow: hidden;
 			padding: 12px;
+			@include transition;
 		}
 		h5 {
 			@include text-style(16px, 500, 20px);
@@ -122,6 +127,7 @@
 	}
 
 	&__right-top {
+		position: relative;
 		@include box(100%, 260px);
 		@include flex(column, flex-start, flex-start);
 		padding: 20px;
@@ -129,8 +135,10 @@
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
 		@media (max-width: 767px) {
-			height: auto;
+			max-height: 44px;
+			overflow: hidden;
 			padding: 12px;
+			@include transition;
 		}
 		h5 {
 			@include text-style(16px, 500, 20px);
@@ -142,6 +150,17 @@
 		ul > li {
 			color: $grey;
 			@include text-style(14px, 400, 16px);
+		}
+	}
+
+	&__arrow {
+		display: none;
+		@media (max-width: 767px) {
+			@include center;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			@include transition;
 		}
 	}
 
@@ -280,14 +299,16 @@
 		@include flex(column, center, center, 20px);
 		padding: 32px;
 		width: 480px;
+		height: max-content;
 		position: relative;
 		border-radius: 16px;
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
 		box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.24);
 		@media (max-width: 767px) {
+			@include flex(column, flex-start, flex-start, 12px);
 			width: calc(100% - 16px);
-			padding: 16px;
+			padding: 20px 12px;
 		}
 	}
 
@@ -311,6 +332,10 @@
 		border-radius: 8px;
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $bg;
+		@media (max-width: 767px) {
+			padding: 12px;
+			gap: 8px;
+		}
 	}
 
 	&-form-input {
@@ -321,6 +346,9 @@
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
 		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
 	}
 
 	&-form-textarea {
@@ -332,6 +360,9 @@
 		background: $white;
 		@include text-style(16px, 400, 20px);
 		resize: none;
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
 	}
 
 	&-form-stars-wrap {

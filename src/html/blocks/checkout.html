@@ -14,11 +14,68 @@
 				<button class="checkout__switch">Я уже зарегистрирован</button>
 			</div>
 			<div class="checkout__first">
+				<div class="checkout__block mobile">
+					<div class="checkout__block-top">
+						<p>Содержимое заказа</p>
+						<img src="./img/chev.svg" alt="" />
+					</div>
+					<ul class="checkout__products">
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-1.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Опрыскиватель аккумуляторный "Литолан" 5л</p>
+								<span>950 ₴</span>
+								<span>1 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-2.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Емкость для воды вертикальная, две горловины, 10000 л</p>
+								<span>40 000 ₴</span>
+								<span>1 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-3.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Пластиковая канистра Litolan с носиком для ГСМ, 20л</p>
+								<span>460 ₴</span>
+								<span>2 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-4.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Пластиковая канистра пищевая Litolan, 10 л</p>
+								<span>95 ₴</span>
+								<span>5 шт</span>
+							</div>
+						</li>
+					</ul>
+					<a class="checkout__change" href="#">Изменить заказ</a>
+				</div>
 				<div class="checkout__sub-block">
 					<h2 class="checkout__subtitle">Контактная информация</h2>
 					<input type="text" placeholder="Имя и фамилия" />
 					<div class="checkout__row">
-						<input type="text" placeholder="Телефон" />
+						<input type="text" placeholder="Телефон" data-phone-input />
 						<input type="text" placeholder="Электронная почта" />
 					</div>
 					<span class="checkout__descr"
@@ -81,8 +138,84 @@
 						Онлайн оплата
 					</label>
 				</div>
+				<div class="checkout__comment">
+					<label class="checkout__comment-label">Комментарий к заказу</label>
+					<textarea
+						class="checkout__comment-textarea"
+						placeholder="Введите комментарий по желанию"
+					></textarea>
+				</div>
+				<div class="checkout__bottom-info">
+					<div class="checkout__message">
+						<img src="./img/transit.svg" alt="" />
+						Предлагаем самые выгодные условия доставки на рынке
+					</div>
+					<p class="checkout__result">Итого к оплате: 35 000 ₴</p>
+					<button class="checkout__btn">Оформить заказ</button>
+					<div class="checkout__description">
+						<p>Совершая регистрацию, вы соглашаетесь</p>
+						<a href="#">пользовательским соглашением</a>
+					</div>
+				</div>
 			</div>
 			<div class="checkout__second">
+				<div class="checkout__block mobile">
+					<div class="checkout__block-top">
+						<p>Содержимое заказа</p>
+						<img src="./img/chev.svg" alt="" />
+					</div>
+					<ul class="checkout__products">
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-1.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Опрыскиватель аккумуляторный "Литолан" 5л</p>
+								<span>950 ₴</span>
+								<span>1 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-2.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Емкость для воды вертикальная, две горловины, 10000 л</p>
+								<span>40 000 ₴</span>
+								<span>1 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-3.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Пластиковая канистра Litolan с носиком для ГСМ, 20л</p>
+								<span>460 ₴</span>
+								<span>2 шт</span>
+							</div>
+						</li>
+						<li class="checkout__product">
+							<img
+								class="checkout__product-img"
+								src="./img/cart-4.png"
+								alt=""
+							/>
+							<div class="checkout__product-info">
+								<p>Пластиковая канистра пищевая Litolan, 10 л</p>
+								<span>95 ₴</span>
+								<span>5 шт</span>
+							</div>
+						</li>
+					</ul>
+					<a class="checkout__change" href="#">Изменить заказ</a>
+				</div>
 				<div class="checkout__sub-block">
 					<input type="text" placeholder="Электронная почта" />
 					<input type="text" placeholder="Пароль" />

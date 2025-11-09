@@ -1,14 +1,14 @@
 @use '../abstracts' as *;
 
 .information {
-	margin: 80px 0;
+	margin: 80px 0 8px 0;
 	@include flex(column, flex-start, flex-start, 16px);
 	padding: 32px;
 	border-radius: 16px;
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
 	@media (max-width: 767px) {
-		margin: 40px 0;
+		margin: 20px 0 8px 0;
 		gap: 8px;
 		padding: 12px;
 	}

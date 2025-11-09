@@ -1,7 +1,7 @@
 export function initMainSwiper() {
 	new Swiper('.hero__slider', {
 		spaceBetween: 8,
-		slidesPerView: 1,
+		slidesPerView: 1.4,
 		navigation: {
 			prevEl: '.hero__slider__prev',
 			nextEl: '.hero__slider__next',
@@ -9,6 +9,10 @@ export function initMainSwiper() {
 		pagination: {
 			el: '.hero__slider__pagination',
 			clickable: true,
+		},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
 		},
 		breakpoints: {
 			991: {
@@ -24,7 +28,7 @@ export function initMainSwiper() {
 export function initAssortmentSwiper() {
 	new Swiper('.assortment__right-slider', {
 		spaceBetween: 4,
-		slidesPerView: 2,
+		slidesPerView: 2.5,
 		navigation: {
 			prevEl: '.assortment__right-slider__prev',
 			nextEl: '.assortment__right-slider__next',
@@ -50,6 +54,10 @@ export function initReviewsSwiper() {
 			prevEl: '.reviews__swiper__prev',
 			nextEl: '.reviews__swiper__next',
 		},
+		pagination: {
+			el: '.reviews__pagination',
+			clickable: true,
+		},
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
@@ -73,16 +81,56 @@ export function initProductSwiper() {
 		spaceBetween: 10,
 		watchSlidesProgress: true,
 	})
-	// великий слайдер
-	const largeSlider = new Swiper('.large-slider', {
+
+	function getNavSelectors() {
+		// перевірка ширини екрану
+		const isMobile = window.innerWidth <= 768
+		return {
+			nextEl: isMobile
+				? '.large-swiper-nav .large-swiper-next'
+				: '.large-slider .large-swiper-next',
+			prevEl: isMobile
+				? '.large-swiper-nav .large-swiper-prev'
+				: '.large-slider .large-swiper-prev',
+		}
+	}
+
+	// створюємо Swiper
+	let largeSlider = new Swiper('.large-slider', {
 		slidesPerView: 1,
 		spaceBetween: 10,
-		navigation: {
-			nextEl: '.large-swiper-next',
-			prevEl: '.large-swiper-prev',
+		navigation: getNavSelectors(),
+		pagination: {
+			el: '.large-swiper-pagination',
+			clickable: true,
 		},
 		thumbs: {
 			swiper: smallSlider,
 		},
+	})
+
+	// Реініціалізація при ресайзі (щоб перемикались кнопки)
+	window.addEventListener('resize', () => {
+		const newNav = getNavSelectors()
+
+		// якщо кнопки змінились — переініціалізуємо Swiper
+		if (
+			newNav.nextEl !== largeSlider.params.navigation.nextEl ||
+			newNav.prevEl !== largeSlider.params.navigation.prevEl
+		) {
+			largeSlider.destroy(true, true)
+			largeSlider = new Swiper('.large-slider', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				navigation: newNav,
+				pagination: {
+					el: '.large-swiper-pagination',
+					clickable: true,
+				},
+				thumbs: {
+					swiper: smallSlider,
+				},
+			})
+		}
 	})
 }

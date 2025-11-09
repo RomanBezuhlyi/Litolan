@@ -5,26 +5,36 @@
 	border-radius: 16px;
 	background: $green;
 	@media (max-width: 767px) {
-		padding: 20px 12px 12px 12px;
+		padding: 20px 8px 8px 8px;
 	}
 	&__title {
 		color: $white;
 		@include text-style(36px, 500, 44px, center);
 		margin-bottom: 20px;
 		@media (max-width: 767px) {
-			@include text-style(24px, 500, 26px, center);
-			margin-bottom: 12px;
+			@include text-style(24px, 500, 28px, center);
+			margin-bottom: 8px;
 		}
 	}
 
 	&__swiper-wrap {
 		@include flex(row, center, center, 8px);
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 
 	&__swiper {
 		width: 95%;
 		@media (max-width: 767px) {
-			width: 80%;
+			width: 100%;
+		}
+	}
+
+	&__swiper__prev.desktop,
+	&__swiper__next.desktop {
+		@media (max-width: 767px) {
+			display: none;
 		}
 	}
 
@@ -36,12 +46,33 @@
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
 		@media (max-width: 767px) {
-			@include box(30px);
+			width: auto;
+			height: auto;
+			border-radius: 0;
+			border: 0;
+			background: transparent;
 		}
 	}
 
 	&__swiper__prev {
 		transform: rotate(180deg);
+	}
+	.swiper-pagination-bullet {
+		display: block;
+		margin: 0 !important;
+		position: static !important;
+	}
+
+	&__pagination {
+		width: fit-content !important;
+		@include flex(row, center, center, 8px);
+	}
+
+	&__swiper-nav {
+		display: none;
+		@media (max-width: 767px) {
+			@include flex(row, center, center, 8px);
+		}
 	}
 
 	&__list {
@@ -59,7 +90,6 @@
 		background: $white;
 		@media (max-width: 767px) {
 			padding: 12px;
-			gap: 8px;
 		}
 	}
 
@@ -73,6 +103,9 @@
 			@include flex(row, flex-start, center, 2px);
 			&__star {
 				@include box(24px);
+				@media (max-width: 767px) {
+					@include box(20px);
+				}
 			}
 		}
 		.name {
@@ -120,9 +153,6 @@
 			width: 1px;
 			height: 16px;
 			background: #d9d9d9;
-			@media (max-width: 767px) {
-				height: 12px;
-			}
 		}
 		.cart {
 			display: flex;

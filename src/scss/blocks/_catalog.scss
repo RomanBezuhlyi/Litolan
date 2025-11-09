@@ -37,10 +37,6 @@
 		@media (max-width: 991px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-
-		@media (max-width: 575px) {
-			grid-template-columns: 1fr;
-		}
 	}
 
 	&__card {
@@ -50,14 +46,24 @@
 		border-radius: 12px;
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
+		@media (max-width: 991px) {
+			padding: 8px;
+		}
 	}
 
 	&__marks {
 		position: absolute;
 		top: 12px;
 		left: 12px;
+		@media (max-width: 991px) {
+			top: 8px;
+			left: 8px;
+		}
 		.like {
 			margin-bottom: 12px;
+			@media (max-width: 991px) {
+				margin-bottom: 8px;
+			}
 		}
 		.action {
 			color: $white;
@@ -78,6 +84,9 @@
 
 	&__card-img {
 		margin: auto;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
 	}
 
 	&__card-tag {
@@ -97,6 +106,9 @@
 		text-overflow: ellipsis;
 		@include text-style(16px, 400, 20px);
 		margin-bottom: 4px;
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 16px);
+		}
 	}
 
 	&__card-review {
@@ -121,20 +133,32 @@
 		border-radius: 8px;
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $bg;
+		@media (max-width: 991px) {
+			padding: 8px;
+		}
 		.price {
 			@include flex(row, flex-start, center, 8px);
 		}
 		.new {
 			color: $red;
 			@include text-style(16px, 500, 20px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 500, 16px);
+			}
 		}
 		.old {
 			color: $grey;
 			@include text-style(14px, 400, 16px);
 			text-decoration-line: line-through;
+			@media (max-width: 991px) {
+				@include text-style(12px, 500, 14px);
+			}
 		}
 		.current {
 			@include text-style(16px, 500, 20px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 500, 16px);
+			}
 		}
 		.cart {
 			position: relative;
@@ -148,6 +172,9 @@
 				width: 1px;
 				height: 16px;
 				background: #d9d9d9;
+				@media (max-width: 991px) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -161,7 +188,7 @@
 		border-radius: 8px;
 		background: $yellow;
 		@media (max-width: 767px) {
-			padding: 8px 12px;
+			padding: 8px 24px;
 		}
 	}
 }

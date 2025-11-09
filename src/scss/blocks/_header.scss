@@ -150,10 +150,9 @@
 		background: $yellow;
 		color: $white;
 		@include text-style(16px, 500, 20px);
-		@media (max-width: 991px) {
-			img {
-				display: none;
-			}
+		@media (max-width: 767px) {
+			gap: 8px;
+			height: 36px;
 		}
 	}
 
@@ -161,6 +160,10 @@
 		position: relative;
 		width: 100%;
 		height: 40px;
+		@media (max-width: 767px) {
+			max-width: 193px;
+			height: 36px;
+		}
 		input {
 			padding: 10px 16px 10px 52px;
 			@include box(100%, 100%, 8px);
@@ -182,6 +185,9 @@
 
 	&__bottom-right {
 		@include flex(row, flex-end, center, 8px);
+		@media (max-width: 767px) {
+			gap: 4px;
+		}
 	}
 
 	&__bottom-currency {
@@ -190,6 +196,13 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@media (max-width: 767px) {
+			padding: 8px;
+			gap: 0;
+			img {
+				@include box(20px);
+			}
+		}
 	}
 
 	&__bottom-user {
@@ -198,6 +211,12 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@media (max-width: 767px) {
+			padding: 8px;
+			img {
+				@include box(20px);
+			}
+		}
 	}
 
 	&__bottom-heart {
@@ -207,12 +226,22 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@media (max-width: 767px) {
+			padding: 8px;
+			img {
+				@include box(20px);
+			}
+		}
 
 		.mark {
 			position: absolute;
 			top: 5px;
 			right: 5px;
 			background: transparent;
+			@media (max-width: 767px) {
+				top: 2px;
+				right: 2px;
+			}
 		}
 	}
 
@@ -222,6 +251,13 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@media (max-width: 767px) {
+			padding: 8px;
+			gap: 0;
+			img {
+				@include box(20px);
+			}
+		}
 		span {
 			@include text-style(14px, 400, 16px);
 			@media (max-width: 991px) {
@@ -237,6 +273,10 @@
 			top: -2px;
 			right: -4px;
 			background: transparent;
+			@media (max-width: 767px) {
+				top: -6px;
+				right: -7px;
+			}
 		}
 	}
 }
@@ -245,100 +285,34 @@
 	display: none;
 	@media (max-width: 767px) {
 		width: 100%;
-		@include flex(row, space-between, center, 8px);
-		background-color: $white;
-		border-radius: 8px;
+		@include flex(column, center, flex-start, 8px);
 		padding: 8px;
+		border-radius: 16px;
+		background: $white;
 	}
-
-	&__left {
-		@include flex(row, center, center, 4px);
-		padding: 4px 8px;
-		border-radius: 8px;
-		background: $yellow;
-		color: $white;
-		@include text-style(14px, 500, 16px);
-	}
-
-	&__center {
-		width: 120px;
-		@include center;
-	}
-
-	&__right {
-		@include flex(row, flex-end, center, 20px);
-	}
-}
-
-.header-mobile-menu {
-	display: none;
-	@media (max-width: 767px) {
-		position: absolute;
-		top: 110px;
+	&__top {
 		width: 100%;
-		@include flex(column, center, center, 20px);
-		background-color: $white;
+		@include flex(row, space-between, center, 20px);
+	}
+
+	&__top > a {
+		@include center;
+		@include box(156px, 38px);
+	}
+
+	&__bottom {
+		width: 100%;
+		@include flex(row, space-between, center, 4px);
+	}
+
+	&__burger {
+		@include center;
+		@include box(36px);
 		border-radius: 8px;
-		padding: 24px;
-		opacity: 0;
-		pointer-events: none;
-		transform: translateY(-20px);
-		@include transition;
-		z-index: 10;
-		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
-	}
-
-	&__nav {
-		@include flex(column, center, center, 20px);
-		a {
-			@include flex(row, flex-start, center, 4px);
-			@include text-style(18px, 400, 20px);
-			.viber {
-				display: none;
-			}
-		}
-	}
-}
-
-.header-mobile-menu.active {
-	opacity: 1;
-	pointer-events: all;
-	transform: translateY(0);
-}
-
-.header-mobile-search {
-	display: none;
-	@media (max-width: 767px) {
-		position: absolute;
-		top: 110px;
-		width: calc(100% - 16px);
-		@include flex(column, center, center, 20px);
-		background-color: $white;
-		border-radius: 8px;
-		padding: 24px;
-		opacity: 0;
-		pointer-events: none;
-		transform: translateY(-20px);
-		@include transition;
-		z-index: 9;
-	}
-	input {
-		padding: 10px 16px;
-		@include box(100%, 100%, 8px);
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
-		@include text-style(16px, 400, 20px);
+		@include transition;
 	}
-	input::placeholder {
-		color: $black;
-		opacity: 1;
-	}
-}
-
-.header-mobile-search.active {
-	opacity: 1;
-	pointer-events: all;
-	transform: translateY(0);
 }
 
 body.menu-open {
@@ -402,7 +376,6 @@ body.menu-open {
 			left: 12px;
 		}
 		@media (max-width: 991px) {
-			flex-direction: column;
 			height: auto;
 			width: 50%;
 		}
@@ -411,7 +384,8 @@ body.menu-open {
 		}
 		@media (max-width: 767px) {
 			width: calc(100% - 16px);
-			top: 100px;
+			top: 138px;
+			padding: 0;
 		}
 	}
 
@@ -421,20 +395,29 @@ body.menu-open {
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: $white;
 		@include flex(column, flex-start, flex-start, 8px);
-		@media (max-width: 991px) {
-			gap: 4px;
-			padding: 8px;
-		}
 		&.first {
 			@include box(288px, 100%);
 		}
 		&.second {
 			display: none;
 			@include box(288px, 100%);
+			@media (max-width: 991px) {
+				position: absolute;
+				left: 0;
+				top: 0;
+				@include box(100%);
+			}
 		}
 		&.third {
 			display: none;
 			@include box(340px, 100%);
+			@media (max-width: 991px) {
+				position: absolute;
+				left: 0;
+				top: 0;
+				@include box(100%);
+				gap: 4px;
+			}
 		}
 		&.fourth {
 			@include box(320px, 100%);
@@ -445,6 +428,8 @@ body.menu-open {
 		}
 		@media (max-width: 991px) {
 			width: 100% !important;
+			height: 544px;
+			border: none;
 		}
 	}
 
@@ -456,11 +441,6 @@ body.menu-open {
 		border-radius: 8px;
 		border: 1px solid transparent;
 		@include transition;
-		@media (max-width: 991px) {
-			@include text-style(14px, 400, 16px);
-			gap: 8px;
-			padding: 4px;
-		}
 		&:hover {
 			border-color: rgba(0, 0, 0, 0.06);
 			background: $white;
@@ -477,7 +457,27 @@ body.menu-open {
 		&.second {
 			padding: 4px 12px;
 			@media (max-width: 991px) {
-				padding: 4px;
+				img {
+					@include box(48px);
+				}
+			}
+		}
+	}
+
+	&__menu-item--back {
+		display: none;
+		@media (max-width: 991px) {
+			@include flex(row, flex-start, center, 12px);
+			width: 100%;
+			padding: 7px;
+			@include text-style(16px, 500, 20px);
+			border-radius: 8px;
+			border: 1px solid transparent;
+			@include transition;
+			&:hover {
+				border-color: rgba(0, 0, 0, 0.06);
+				background: $white;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
 			}
 		}
 	}
@@ -565,4 +565,169 @@ body.menu-open {
 			background: $bg;
 		}
 	}
+}
+
+.menu {
+	position: absolute;
+	top: 146px;
+	@include flex(column, flex-start, center, 12px);
+	width: calc(100% - 16px);
+	padding: 20px 12px;
+	border-radius: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: $white;
+	box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.24);
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-10px);
+	@include transition;
+	z-index: 100;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+
+	&__langs {
+		@include flex(row, center, center, 24px);
+	}
+
+	&__lang {
+		@include text-style(16px, 400, 20px);
+		text-decoration-line: underline;
+		text-decoration-style: dotted;
+		text-decoration-color: #c5c5c5;
+		text-decoration-thickness: 15%;
+		&:hover {
+			color: $grey;
+		}
+		&.active {
+			color: $grey;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		@include flex(column, center, center, 4px);
+		padding: 12px;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: #f6f6f6;
+	}
+
+	&__nav-item {
+		width: 100%;
+		@include flex(row, flex-start, center, 4px);
+		padding: 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@include text-style(16px, 400, 20px);
+	}
+
+	.dropdown {
+		width: 100%;
+		width: 100%;
+		@include flex(row, flex-start, center, 4px);
+		padding: 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+
+		&__toggle {
+			width: 100%;
+			justify-content: space-between;
+			@include text-style(16px, 400, 20px);
+		}
+
+		&__menu {
+			top: 100%;
+			width: 100%;
+			@include text-style(16px, 400, 20px);
+		}
+	}
+
+	&__contacts {
+		width: 100%;
+		@include flex(column, center, center, 8px);
+		padding: 12px;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: #f6f6f6;
+	}
+
+	&__contacts-cities {
+		@include flex(row, center, center, 24px);
+	}
+
+	&__contacts-city {
+		@include text-style(16px, 400, 20px);
+		text-decoration-line: underline;
+		text-decoration-style: dotted;
+		text-decoration-color: #c5c5c5;
+		text-decoration-thickness: 15%;
+		&:hover {
+			color: $grey;
+		}
+		&.active {
+			color: $grey;
+		}
+	}
+
+	&__contacts-phones {
+		@include flex(row, center, center, 4px);
+	}
+
+	&__contacts-phone {
+		@include flex(row, center, center, 4px);
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@include text-style(16px, 400, 20px);
+	}
+
+	&__contacts-order-call {
+		width: 100%;
+		@include flex(row, center, center, 8px);
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: 1px solid rgba(119, 160, 71, 0.2);
+		background: $white;
+		@include text-style(16px, 400, 20px);
+	}
+
+	&__schedule {
+		@include text-style(16px, 400, 20px, center);
+	}
+}
+
+.menu__nav-item-drop {
+	width: 100%;
+	border-radius: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	background: $white;
+	padding: 12px 12px 0 12px;
+}
+
+.menu__nav-item-drop--top {
+	@include flex(row, space-between, center, 4px);
+	@include text-style(16px, 400, 20px);
+	margin-bottom: 12px;
+}
+
+.menu__nav-item-drop--list {
+	@include flex(column, flex-start, flex-start, 8px);
+	max-height: 0;
+	overflow: hidden;
+	@include transition;
+	@include text-style(16px, 400, 20px);
+}
+.menu__nav-item-drop--list li:last-child {
+	padding-bottom: 12px;
+}
+
+.menu__nav-item-drop.open .menu__nav-item-drop--list {
+	max-height: 200px;
 }

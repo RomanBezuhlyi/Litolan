@@ -1,9 +1,13 @@
 @use '../abstracts' as *;
 
+body {
+	overflow-x: hidden;
+}
 .assortment {
+	position: relative;
 	@include flex(row, flex-start, flex-start, 40px);
 	@media (max-width: 767px) {
-		gap: 20px;
+		gap: 12px;
 	}
 	@media (max-width: 480px) {
 		flex-direction: column;
@@ -21,18 +25,18 @@
 		}
 		@media (max-width: 767px) {
 			position: absolute;
-			top: 150px;
+			top: 336px;
 			left: 8px;
 			opacity: 0;
 			pointer-events: none;
 			transform: translateX(-10px);
 			border-radius: 12px;
-			border: 1px solid rgba(0, 0, 0, 0.06);
+			border: 0;
 			background: $white;
-			padding: 12px;
+			padding: 0;
 			@include transition;
 			z-index: 11;
-			width: 70%;
+			width: calc(100% - 16px);
 			&.open {
 				opacity: 1;
 				pointer-events: all;
@@ -56,6 +60,12 @@
 			width: 100%;
 			flex-direction: row;
 			flex-wrap: wrap;
+		}
+	}
+
+	&__menu.desktop {
+		@media (max-width: 767px) {
+			display: none;
 		}
 	}
 
@@ -254,21 +264,6 @@
 		}
 	}
 
-	&__right-btn-filter {
-		margin-left: auto;
-		margin-bottom: 12px;
-		@include flex(row, center, center);
-		display: none;
-		padding: 8px;
-		border-radius: 8px;
-		background: $green;
-		color: $white;
-		@include text-style(16px, 400, 20px);
-		@media (max-width: 767px) {
-			display: flex;
-		}
-	}
-
 	&__right-title {
 		@include text-style(36px, 500, 44px);
 		margin-bottom: 40px;
@@ -279,18 +274,18 @@
 	}
 
 	&__right-switcher {
-		@include flex(row, flex-start, center, 2px);
+		@include flex(row, center, center, 2px);
 		padding: 2px;
+		width: fit-content;
 		border-radius: 200px;
 		border: 1px solid rgba(0, 0, 0, 0.06);
 		background: rgba(0, 0, 0, 0.06);
+		overflow: auto;
+		flex-wrap: wrap;
 		margin-bottom: 12px;
-		@media (max-width: 991px) {
-			flex-wrap: wrap;
-			border-radius: 10px;
-		}
 		@media (max-width: 767px) {
-			justify-content: center;
+			width: 100%;
+			flex-wrap: nowrap;
 		}
 	}
 
@@ -304,11 +299,9 @@
 		border: 1px solid transparent;
 		@include transition;
 		@media (max-width: 1200px) {
-			padding: 8px;
+			padding: 6px 12px;
 			@include text-style(14px, 400, 16px, center);
-		}
-		@media (max-width: 767px) {
-			width: 45%;
+			white-space: nowrap;
 		}
 	}
 
@@ -408,13 +401,15 @@
 		@media (max-width: 767px) {
 			gap: 8px;
 			align-items: flex-start;
+			padding-right: 0;
 		}
 	}
 
 	&__right-volume {
 		@include flex(row, flex-start, center, 8px);
 		@media (max-width: 991px) {
-			flex-wrap: wrap;
+			overflow: hidden;
+			width: 100%;
 		}
 	}
 
@@ -425,7 +420,10 @@
 	&__right-volume--switcher {
 		@include flex(row, flex-start, center, 4px);
 		@media (max-width: 767px) {
-			flex-wrap: wrap;
+			width: 100%;
+			overflow: auto;
+			padding-right: 8px;
+			padding-bottom: 3px;
 		}
 	}
 
@@ -444,6 +442,17 @@
 		&.active {
 			color: $white;
 			background: $green;
+		}
+	}
+
+	&__right-btn-filter {
+		display: none;
+		@media (max-width: 767px) {
+			@include center;
+			@include box(36px);
+			border-radius: 8px;
+			border: 1px solid rgba(0, 0, 0, 0.06);
+			background: $white;
 		}
 	}
 
@@ -466,10 +475,6 @@
 		@media (max-width: 991px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-
-		@media (max-width: 575px) {
-			grid-template-columns: 1fr;
-		}
 	}
 }
 
@@ -485,6 +490,9 @@
 		background: $bg;
 		border-radius: 8px;
 		cursor: pointer;
+		@media (max-width: 767px) {
+			background: $white;
+		}
 	}
 	&__value {
 		@include text-style(14px, 400, 16px);

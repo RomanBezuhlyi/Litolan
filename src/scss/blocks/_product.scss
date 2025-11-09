@@ -8,10 +8,6 @@
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
 	margin-bottom: 8px;
-	@media (max-width: 1200px) {
-		flex-direction: column-reverse;
-		gap: 20px;
-	}
 	@media (max-width: 767px) {
 		padding: 12px;
 	}
@@ -19,18 +15,15 @@
 		width: 50%;
 		height: 696px;
 		@include flex(row, flex-start, flex-start, 8px);
-		@media (max-width: 1200px) {
-			width: 100%;
-		}
 		@media (max-width: 767px) {
-			height: auto;
+			display: none;
 		}
 	}
 
 	&__right {
 		width: 50%;
 		@include flex(column, flex-start, flex-start, 8px);
-		@media (max-width: 1200px) {
+		@media (max-width: 767px) {
 			width: 100%;
 		}
 	}
@@ -44,6 +37,9 @@
 		@include center;
 		color: $grey;
 		@include text-style(14px, 400, 16px);
+		@media (max-width: 767px) {
+			@include text-style(12px, 400, 14px);
+		}
 		a {
 			color: $green;
 		}
@@ -63,7 +59,7 @@
 		@media (max-width: 767px) {
 			flex-wrap: wrap;
 			gap: 12px;
-			margin-bottom: 12px;
+			margin-bottom: 8px;
 		}
 	}
 
@@ -71,6 +67,9 @@
 		@include flex(row, flex-start, center, 4px);
 		color: $grey;
 		@include text-style(16px, 400, 20px);
+		@media (max-width: 767px) {
+			@include text-style(14px, 400, 16px);
+		}
 		span {
 			color: $black;
 		}
@@ -84,6 +83,7 @@
 		@include flex(row, center, flex-start, 20px);
 		@media (max-width: 1200px) {
 			gap: 12px;
+			flex-wrap: wrap;
 		}
 		@media (max-width: 767px) {
 			flex-direction: column;
@@ -96,8 +96,10 @@
 		padding: 20px;
 		border-radius: 12px;
 		background: $bg;
-		@media (max-width: 767px) {
+		@media (max-width: 1200px) {
 			width: 100%;
+		}
+		@media (max-width: 767px) {
 			padding: 12px;
 		}
 
@@ -118,6 +120,9 @@
 			@include flex(row, flex-start, center, 8px);
 			cursor: pointer;
 			position: relative;
+			@media (max-width: 767px) {
+				gap: 0;
+			}
 		}
 
 		.option input {
@@ -175,17 +180,27 @@
 		margin-bottom: 8px;
 		.new {
 			@include text-style(36px, 500, 44px);
+			@media (max-width: 767px) {
+				@include text-style(24px, 500, 28px);
+			}
 		}
 		.old {
 			color: $grey;
 			@include text-style(20px, 400, 24px);
 			text-decoration-line: line-through;
+			@media (max-width: 767px) {
+				@include text-style(16px, 400, 18px);
+			}
 		}
 	}
 
 	.product-actions {
 		@include flex(row, center, center, 8px);
 		margin-bottom: 20px;
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-bottom: 8px;
+		}
 	}
 
 	.add-to-cart {
@@ -195,6 +210,9 @@
 		background: $green;
 		color: $white;
 		@include text-style(16px, 500, 20px);
+		@media (max-width: 767px) {
+			width: 50%;
+		}
 	}
 	.product-form {
 		@include flex(row, center, center, 8px);
@@ -206,6 +224,9 @@
 			border-radius: 8px;
 			border: 1px solid rgba(0, 0, 0, 0.06);
 			background: $white;
+			@media (max-width: 767px) {
+				width: 60%;
+			}
 		}
 		button {
 			@include center;
@@ -214,7 +235,11 @@
 			border-radius: 8px;
 			background: $yellow;
 			color: $white;
+			white-space: nowrap;
 			@include text-style(14px, 500, 16px, center);
+			@media (max-width: 767px) {
+				width: 40%;
+			}
 		}
 	}
 
@@ -225,7 +250,7 @@
 
 	&__right-char--right {
 		width: 50%;
-		@media (max-width: 767px) {
+		@media (max-width: 1200px) {
 			width: 100%;
 		}
 		h5 {
@@ -280,12 +305,18 @@
 		width: 100%;
 		border-radius: 12px;
 		background: #f6f6f6;
+		@media (max-width: 767px) {
+			padding: 12px 12px 4px 12px;
+		}
 	}
 
 	&__accordion-item--top {
 		@include flex(row, space-between, center);
 		margin-bottom: 12px;
 		cursor: pointer;
+		@media (max-width: 767px) {
+			margin-bottom: 8px;
+		}
 		p {
 			@include text-style(16px, 500, 20px);
 		}
@@ -295,9 +326,13 @@
 		max-height: 0;
 		overflow: hidden;
 		@include transition;
+
 		.characteristics {
 			width: 100%;
 			@include flex(column, flex-start, flex-start, 12px);
+			@media (max-width: 767px) {
+				padding-bottom: 8px;
+			}
 		}
 		.characteristics__item {
 			width: 100%;
@@ -313,6 +348,9 @@
 		}
 		.description {
 			@include flex(column, flex-start, flex-start, 12px);
+			@media (max-width: 767px) {
+				padding-bottom: 8px;
+			}
 			li,
 			p {
 				@include text-style(14px, 400, 16px);
@@ -333,6 +371,9 @@
 
 		.documents {
 			@include flex(column, flex-start, flex-start, 12px);
+			@media (max-width: 767px) {
+				padding-bottom: 8px;
+			}
 		}
 
 		.documents__item {
@@ -345,6 +386,9 @@
 	width: 72px;
 	height: 100%;
 	overflow: hidden;
+	@media (max-width: 1200px) {
+		display: none;
+	}
 }
 .small-slider .swiper-slide {
 	@include center;
@@ -372,14 +416,24 @@
 	border-radius: 8px;
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
+	@media (max-width: 1200px) {
+		width: 100%;
+		height: auto;
+	}
 	@media (max-width: 991px) {
 		width: 90%;
 	}
 	@media (max-width: 767px) {
-		width: 80%;
+		width: 100%;
 		height: 350px;
 		img {
 			width: 40%;
+		}
+	}
+	&.mobile {
+		display: none;
+		@media (max-width: 767px) {
+			display: block;
 		}
 	}
 }
@@ -396,11 +450,25 @@
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
 	z-index: 2;
-	@media (max-width: 767px) {
-		padding: 4px;
-		img {
-			width: 24px;
+	&.mobile {
+		display: none;
+		@media (max-width: 767px) {
+			@include center;
 		}
+	}
+	&.desktop {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		position: static;
+		padding: 0;
+		background: transparent;
+		border: none;
+		border-radius: 0;
+		transform: translateY(0) rotate(180deg);
+		@include box(24px);
 	}
 }
 
@@ -416,11 +484,45 @@
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
 	z-index: 2;
-	@media (max-width: 767px) {
-		padding: 4px;
-		img {
-			width: 24px;
+	&.mobile {
+		display: none;
+		@media (max-width: 767px) {
+			@include center;
 		}
+	}
+	&.desktop {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		position: static;
+		padding: 0;
+		background: transparent;
+		border: none;
+		border-radius: 0;
+		transform: translateY(0);
+		@include box(24px);
+	}
+}
+
+.large-swiper-nav {
+	margin: auto;
+	@include flex(row, center, center, 8px);
+}
+
+.large-swiper-pagination {
+	width: fit-content;
+	display: none;
+	@media (max-width: 767px) {
+		@include center;
+	}
+	.swiper-pagination-bullet {
+		opacity: 0.2;
+		background: $grey;
+	}
+	.swiper-pagination-bullet-active {
+		opacity: 1;
 	}
 }
 
@@ -495,6 +597,9 @@
 	border: 1px solid rgba(0, 0, 0, 0.06);
 	background: $white;
 	overflow: hidden;
+	@media (max-width: 767px) {
+		width: 50%;
+	}
 }
 
 .quantity__btn {
