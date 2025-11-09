@@ -160,10 +160,15 @@
 		background: $yellow;
 		color: $white;
 		@include text-style(16px, 500, 20px);
+		@include transition;
+		&:hover {
+			background: $green;
+		}
 		@media (max-width: 767px) {
 			padding: 8px 12px;
 			@include text-style(14px, 500, 16px);
 		}
+
 		&:disabled {
 			background: #d9d9d9;
 			pointer-events: none;

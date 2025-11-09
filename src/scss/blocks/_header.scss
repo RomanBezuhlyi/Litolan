@@ -107,6 +107,11 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@include transition;
+		&:hover {
+			color: $green;
+			border-color: $green;
+		}
 		span {
 			@include text-style(14px, 400, 16px);
 
@@ -150,6 +155,10 @@
 		background: $yellow;
 		color: $white;
 		@include text-style(16px, 500, 20px);
+		@include transition;
+		&:hover {
+			background: $green;
+		}
 		@media (max-width: 767px) {
 			gap: 8px;
 			height: 36px;
@@ -196,6 +205,10 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@include transition;
+		&:hover {
+			border-color: $green;
+		}
 		@media (max-width: 767px) {
 			padding: 8px;
 			gap: 0;
@@ -211,6 +224,10 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@include transition;
+		&:hover {
+			border-color: $green;
+		}
 		@media (max-width: 767px) {
 			padding: 8px;
 			img {
@@ -226,6 +243,10 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@include transition;
+		&:hover {
+			border-color: $green;
+		}
 		@media (max-width: 767px) {
 			padding: 8px;
 			img {
@@ -251,6 +272,11 @@
 		border-radius: 8px;
 		border: 1px solid rgba(119, 160, 71, 0.2);
 		background: $white;
+		@include transition;
+		&:hover {
+			color: $green;
+			border-color: $green;
+		}
 		@media (max-width: 767px) {
 			padding: 8px;
 			gap: 0;
@@ -570,6 +596,7 @@ body.menu-open {
 .menu {
 	position: absolute;
 	top: 146px;
+	left: 8px;
 	@include flex(column, flex-start, center, 12px);
 	width: calc(100% - 16px);
 	padding: 20px 12px;

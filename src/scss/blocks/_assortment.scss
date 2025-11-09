@@ -1,8 +1,5 @@
 @use '../abstracts' as *;
 
-body {
-	overflow-x: hidden;
-}
 .assortment {
 	position: relative;
 	@include flex(row, flex-start, flex-start, 40px);

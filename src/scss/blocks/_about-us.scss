@@ -76,6 +76,10 @@
 		@include box(40px, 40px, 50px);
 		padding: 12px 10px 12px 14px;
 		background: $green;
+		@include transition;
+		&:hover {
+			background: $yellow;
+		}
 	}
 
 	&__content-text {

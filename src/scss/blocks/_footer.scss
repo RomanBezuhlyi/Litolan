@@ -195,6 +195,11 @@
 			border: 1px solid rgba(119, 160, 71, 0.2);
 			background: $white;
 			@include text-style(14px, 400, 16px);
+			@include transition;
+			&:hover {
+				color: $green;
+				border-color: $green;
+			}
 			@media (max-width: 1200px) {
 				padding: 8px;
 				gap: 4px;
@@ -391,6 +396,10 @@
 		background: $yellow;
 		color: $white;
 		@include text-style(16px, 500, 20px);
+		@include transition;
+		&:hover {
+			background: $green;
+		}
 	}
 
 	.stars {
@@ -524,6 +533,10 @@
 			background: $yellow;
 			color: $white;
 			@include text-style(16px, 500, 20px);
+			@include transition;
+			&:hover {
+				background: $green;
+			}
 		}
 	}
 }

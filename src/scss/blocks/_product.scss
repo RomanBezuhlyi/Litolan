@@ -210,6 +210,10 @@
 		background: $green;
 		color: $white;
 		@include text-style(16px, 500, 20px);
+		@include transition;
+		&:hover {
+			background: $yellow;
+		}
 		@media (max-width: 767px) {
 			width: 50%;
 		}
@@ -236,6 +240,10 @@
 			background: $yellow;
 			color: $white;
 			white-space: nowrap;
+			@include transition;
+			&:hover {
+				background: $green;
+			}
 			@include text-style(14px, 500, 16px, center);
 			@media (max-width: 767px) {
 				width: 40%;
