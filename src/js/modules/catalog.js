@@ -1,11 +1,13 @@
 export function initCatalog() {
 	const catalog = document.querySelector('.catalog__menu')
+	if (!catalog) return // якщо каталогу немає — зупиняємось
+
 	const openButtons = document.querySelectorAll('.open-catalog')
 
 	// відкриття каталогу по кнопці
-	openButtons.forEach(btn => {
+	openButtons?.forEach(btn => {
 		btn.addEventListener('click', e => {
-			e.stopPropagation() // щоб клік по кнопці не закривав каталог
+			e.stopPropagation()
 			catalog.classList.toggle('active')
 		})
 	})
@@ -17,16 +19,24 @@ export function initCatalog() {
 		}
 	})
 
-	// активний пункт та відкриття колонок
-	const firstItems = catalog.querySelectorAll(
-		'.catalog__menu-col.first .catalog__menu-item'
-	)
-	const secondItems = catalog.querySelectorAll(
-		'.catalog__menu-col.second .catalog__menu-item'
-	)
-	const thirdItems = catalog.querySelectorAll(
-		'.catalog__menu-col.third .catalog__menu-item'
-	)
+	// колонки
+	const firstCol = catalog.querySelector('.catalog__menu-col.first')
+	const secondCol = catalog.querySelector('.catalog__menu-col.second')
+	const thirdCol = catalog.querySelector('.catalog__menu-col.third')
+	const fourthCol = catalog.querySelector('.catalog__menu-col.fourth')
+
+	// якщо мінімально потрібних колонок немає — виходимо
+	if (!firstCol || !secondCol || !fourthCol) return
+
+	const firstItems = firstCol.querySelectorAll('.catalog__menu-item') || []
+	const secondItems = secondCol.querySelectorAll('.catalog__menu-item') || []
+	const thirdItems = thirdCol?.querySelectorAll('.catalog__menu-item') || []
+
+	// 🔹 ПО ДЕФОЛТУ: перша, друга і четверта відкриті
+	firstCol.style.display = 'flex'
+	secondCol.style.display = 'flex'
+	fourthCol.style.display = 'flex'
+	if (thirdCol) thirdCol.style.display = 'none'
 
 	// клік по першій колонці
 	firstItems.forEach(item => {
@@ -35,11 +45,11 @@ export function initCatalog() {
 			firstItems.forEach(i => i.classList.remove('active'))
 			secondItems.forEach(i => i.classList.remove('active'))
 			thirdItems.forEach(i => i.classList.remove('active'))
+
 			item.classList.add('active')
 
-			// показати другу колонку
-			catalog.querySelector('.catalog__menu-col.second').style.display = 'flex'
-			catalog.querySelector('.catalog__menu-col.third').style.display = 'none'
+			secondCol.style.display = 'flex'
+			if (thirdCol) thirdCol.style.display = 'none'
 		})
 	})
 
@@ -51,50 +61,36 @@ export function initCatalog() {
 			thirdItems.forEach(i => i.classList.remove('active'))
 			item.classList.add('active')
 
-			// показати третю колонку
-			catalog.querySelector('.catalog__menu-col.third').style.display = 'flex'
+			if (thirdCol) thirdCol.style.display = 'flex'
 		})
 	})
 
 	// клік по третій колонці
-	thirdItems.forEach(item => {
+	thirdItems?.forEach(item => {
 		item.addEventListener('click', e => {
 			e.preventDefault()
 			thirdItems.forEach(i => i.classList.remove('active'))
 			item.classList.add('active')
-
-			// показати четверту колонку
-			catalog.querySelector('.catalog__menu-col.fourth').style.display = 'flex'
+			// четверта завжди показана — нічого не міняємо
 		})
 	})
 
-	// кнопки "назад" у другій і третій колонках
-	const backButtons = catalog.querySelectorAll('.catalog__menu-item--back')
-
+	// кнопки "назад"
+	const backButtons =
+		catalog.querySelectorAll('.catalog__menu-item--back') || []
 	backButtons.forEach(btn => {
 		btn.addEventListener('click', e => {
 			e.preventDefault()
-
-			// знаходимо, у якій колонці ця кнопка
 			const col = btn.closest('.catalog__menu-col')
+			if (!col) return
 
 			if (col.classList.contains('third')) {
-				// якщо це третя колонка — сховати її, показати другу
 				col.style.display = 'none'
-				catalog.querySelector('.catalog__menu-col.second').style.display =
-					'flex'
-				// зняти активність з третьої колонки
-				catalog
-					.querySelectorAll('.catalog__menu-col.third .catalog__menu-item')
-					.forEach(i => i.classList.remove('active'))
+				secondCol.style.display = 'flex'
+				thirdItems.forEach(i => i.classList.remove('active'))
 			} else if (col.classList.contains('second')) {
-				// якщо це друга колонка — сховати її, показати першу
-				col.style.display = 'none'
-				catalog.querySelector('.catalog__menu-col.first').style.display = 'flex'
-				// зняти активність з другої колонки
-				catalog
-					.querySelectorAll('.catalog__menu-col.second .catalog__menu-item')
-					.forEach(i => i.classList.remove('active'))
+				secondItems.forEach(i => i.classList.remove('active'))
+				if (thirdCol) thirdCol.style.display = 'none'
 			}
 		})
 	})

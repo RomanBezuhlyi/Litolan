@@ -59,6 +59,10 @@
 	&__top-nav > a {
 		@include flex(row, flex-start, center, 4px);
 		@include text-style(14px, 400, 16px);
+		@include transition;
+		&:hover {
+			color: $green;
+		}
 	}
 
 	&__schedule {
@@ -94,6 +98,10 @@
 	&__contacts-numbers > a {
 		@include flex(row, flex-start, center, 4px);
 		@include text-style(14px, 400, 16px);
+		@include transition;
+		&:hover {
+			color: $green;
+		}
 		.viber {
 			@media (max-width: 991px) {
 				display: none;

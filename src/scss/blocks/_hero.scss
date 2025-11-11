@@ -29,26 +29,57 @@
 		}
 	}
 
-	&__menu-item {
+	&__menu-item-wrap {
+		@include flex(column, flex-start, flex-start);
 		width: 100%;
-		@include flex(row, flex-start, center, 12px);
-		@include text-style(16px, 400, 20px);
 		padding: 8px;
+
 		border-radius: 8px;
-		@include transition;
+		transition: 1s all;
 		&:hover {
 			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+			.hero__menu-item--list {
+				max-height: 500px;
+				margin-bottom: 4px;
+				transition: 3s all;
+			}
 		}
 		&.active {
 			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
 		}
+	}
+
+	&__menu-item {
+		width: 100%;
+		@include flex(row, flex-start, center, 12px);
+		@include text-style(16px, 400, 20px);
+		@include transition;
 		@media (max-width: 767px) {
 			@include text-style(14px, 400, 16px);
 			gap: 8px;
-			padding: 4px;
 		}
 		@media (max-width: 480px) {
 			width: 48%;
+		}
+	}
+
+	&__menu-item--list {
+		max-height: 0;
+		padding-left: 36px;
+		overflow: hidden;
+		padding: 0 12px 12px 12px;
+		@include flex(column, flex-start, flex-start, 12px);
+		@include transition;
+	}
+
+	&__menu-item--item {
+		@include text-style(14px, 400, 16px);
+		@include transition;
+		&:first-child {
+			padding-top: 12px;
+		}
+		&:hover {
+			color: #7a8086;
 		}
 	}
 

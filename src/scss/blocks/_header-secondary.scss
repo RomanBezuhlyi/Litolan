@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.header-secondary {
+	width: 100%;
+	@include flex(row, space-between, center);
+	padding: 8px 12px;
+	border-radius: 12px;
+	background: #fff;
+	margin-top: 12px;
+	margin-bottom: 8px;
+	@media (max-width: 767px) {
+		margin-top: 8px;
+	}
+	&__logo {
+		@include center;
+		@include box(162px, 40px);
+	}
+	.header__contacts-numbers {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	.dropdown {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	.header__btn {
+		@media (max-width: 767px) {
+			@include box(36px);
+			padding: 8px;
+		}
+	}
+	.header__btn > span {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+}

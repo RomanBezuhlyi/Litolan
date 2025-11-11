@@ -30,13 +30,19 @@
 
 	&__right-breadcrumbs {
 		@include flex(row, flex-start, center, 8px);
-		flex-wrap: wrap;
+		overflow: auto;
+		width: 100%;
+		@media (max-width: 767px) {
+			padding-bottom: 5px;
+		}
 	}
 
 	&__right-breadcrumbs--item {
 		@include center;
 		color: $grey;
 		@include text-style(14px, 400, 16px);
+		white-space: nowrap;
+		flex-shrink: 0;
 		@media (max-width: 767px) {
 			@include text-style(12px, 400, 14px);
 		}
@@ -582,18 +588,21 @@
 			}
 		}
 	}
-	.threed {
-		@include flex(row, center, center, 8px);
-		padding: 8px 12px;
-		border-radius: 6px;
-		background: $grey;
-		color: $white;
-		@include text-style(14px, 400, 16px);
-		@media (max-width: 767px) {
-			padding: 4px 8px;
-			img {
-				width: 15%;
-			}
+}
+.threed {
+	@include flex(row, center, center, 8px);
+	padding: 8px 12px;
+	border-radius: 6px;
+	background: $grey;
+	color: $white;
+	@include text-style(14px, 400, 16px);
+	@media (max-width: 767px) {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		padding: 4px 8px;
+		img {
+			width: 15%;
 		}
 	}
 }

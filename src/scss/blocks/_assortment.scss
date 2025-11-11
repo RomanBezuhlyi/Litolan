@@ -77,9 +77,8 @@
 			box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
 			.assortment__menu-item--list {
 				max-height: 500px;
-				padding-top: 12px;
 				margin-bottom: 4px;
-				transition: 1s all;
+				transition: 3s all;
 			}
 		}
 		&.active {
@@ -97,6 +96,7 @@
 		max-height: 0;
 		padding-left: 36px;
 		overflow: hidden;
+		padding: 0 12px 12px 12px;
 		@include flex(column, flex-start, flex-start, 12px);
 		@include transition;
 	}
@@ -104,6 +104,9 @@
 	&__menu-item--item {
 		@include text-style(14px, 400, 16px);
 		@include transition;
+		&:first-child {
+			padding-top: 12px;
+		}
 		&:hover {
 			color: #7a8086;
 		}
