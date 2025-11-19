@@ -1,5 +1,5 @@
 const config = {
-	mode: 'production',
+	mode: 'production', // можна залишити production для source maps/оптимізації CSS
 	entry: {
 		index: './src/js/index.js',
 	},
@@ -13,6 +13,9 @@ const config = {
 				use: ['style-loader', 'css-loader'],
 			},
 		],
+	},
+	optimization: {
+		minimize: false, // вимикає мінімізацію JS
 	},
 }
 

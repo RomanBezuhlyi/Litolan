@@ -1,97 +1,176 @@
 export function initCatalog() {
 	const catalog = document.querySelector('.catalog__menu')
-	if (!catalog) return // якщо каталогу немає — зупиняємось
+	if (!catalog) return
 
 	const openButtons = document.querySelectorAll('.open-catalog')
 
-	// відкриття каталогу по кнопці
-	openButtons?.forEach(btn => {
+	openButtons.forEach(btn => {
 		btn.addEventListener('click', e => {
 			e.stopPropagation()
 			catalog.classList.toggle('active')
 		})
 	})
 
-	// закриття каталогу при кліку поза ним
 	document.addEventListener('click', e => {
 		if (!catalog.contains(e.target)) {
 			catalog.classList.remove('active')
 		}
 	})
 
-	// колонки
+	// Колонки
 	const firstCol = catalog.querySelector('.catalog__menu-col.first')
 	const secondCol = catalog.querySelector('.catalog__menu-col.second')
 	const thirdCol = catalog.querySelector('.catalog__menu-col.third')
-	const fourthCol = catalog.querySelector('.catalog__menu-col.fourth')
 
-	// якщо мінімально потрібних колонок немає — виходимо
-	if (!firstCol || !secondCol || !fourthCol) return
+	if (!firstCol || !secondCol || !thirdCol) return
 
-	const firstItems = firstCol.querySelectorAll('.catalog__menu-item') || []
-	const secondItems = secondCol.querySelectorAll('.catalog__menu-item') || []
-	const thirdItems = thirdCol?.querySelectorAll('.catalog__menu-item') || []
+	const firstItems = firstCol.querySelectorAll('.catalog__menu-item')
 
-	// 🔹 ПО ДЕФОЛТУ: перша, друга і четверта відкриті
-	firstCol.style.display = 'flex'
-	secondCol.style.display = 'flex'
-	fourthCol.style.display = 'flex'
-	if (thirdCol) thirdCol.style.display = 'none'
+	//-----------------------------------------------------
+	// 📌 Дані каталогу (розробник замінить на API OpenCart)
+	//-----------------------------------------------------
+	const catalogData = {
+		'Пластиковые емкости': {
+			second: [
+				'Емкости по форме',
+				'Емкости по назначению',
+				'Трехслойные емкости',
+				'Емкости оптом',
+				'Сборные емкости',
+				'Бочки пластиковые',
+			],
+			third: {
+				'Емкости по форме': [
+					{ name: 'Квадратные емкости', img: './img/cat-1.png' },
+					{ name: 'Конусообразные емкости', img: './img/cat-2.png' },
+					{ name: 'Вертикальные емкости', img: './img/cat-3.png' },
+					{ name: 'Горизонтальные емкости', img: './img/cat-4.png' },
+					{ name: 'Еврокуб', img: './img/cat-5.png' },
+					{ name: 'Прямоугольные плоские емкости', img: './img/cat-6.png' },
+					{ name: 'Емкости для КАС', img: './img/cat-7.png' },
+				],
+				'Емкости по назначению': [
+					{ name: 'Квадратные емкости', img: './img/cat-1.png' },
+					{ name: 'Конусообразные емкости', img: './img/cat-2.png' },
+					{ name: 'Вертикальные емкости', img: './img/cat-3.png' },
+					{ name: 'Горизонтальные емкости', img: './img/cat-4.png' },
+					{ name: 'Еврокуб', img: './img/cat-5.png' },
+					{ name: 'Прямоугольные плоские емкости', img: './img/cat-6.png' },
+					{ name: 'Емкости для КАС', img: './img/cat-7.png' },
+				],
+			},
+		},
 
-	// клік по першій колонці
+		'Мелкая тара': {
+			second: ['Категория 1', 'Категория 2'],
+			third: {
+				'Категория 1': ['Підкатегорія 1', 'Підкатегорія 2'],
+				'Категория 2': ['Вариант 1', 'Вариант 2'],
+			},
+		},
+	}
+
+	//-----------------------------------------------------
+	// 📌 РЕНДЕР 2-ї КОЛОНКИ
+	//-----------------------------------------------------
+	function renderSecondColumn(firstName) {
+		const data = catalogData[firstName]
+		if (!data) return
+
+		secondCol.innerHTML = `
+			<a class="catalog__menu-item--back" href="#">
+				<img src="./img/arrow-back.svg" alt="">${firstName}
+			</a>
+		`
+
+		data.second.forEach(item => {
+			secondCol.innerHTML += `
+				<a class="catalog__menu-item" data-second="${item}" href="#">${item}</a>
+			`
+		})
+
+		secondCol.style.display = 'flex'
+		thirdCol.style.display = 'none'
+	}
+
+	//-----------------------------------------------------
+	// 📌 РЕНДЕР 3-ї КОЛОНКИ
+	//-----------------------------------------------------
+	function renderThirdColumn(firstName, secondName) {
+		const data = catalogData[firstName]
+		if (!data || !data.third[secondName]) return
+
+		thirdCol.innerHTML = `
+    <a class="catalog__menu-item--back" href="#">
+      <img src="./img/arrow-back.svg" alt="">${secondName}
+    </a>
+  `
+
+		data.third[secondName].forEach(item => {
+			const el = document.createElement('a')
+			el.className = 'catalog__menu-item second'
+			el.href = '#'
+
+			// картинка + текст
+			el.innerHTML = `
+      <img src="${item.img || ''}" alt="" />
+      <span class="item-name">${item.name || ''}</span>
+    `
+			thirdCol.appendChild(el)
+		})
+
+		thirdCol.style.display = 'flex'
+	}
+
+	//-----------------------------------------------------
+	// 📌 КЛІК ПО ПЕРШІЙ КОЛОНЦІ
+	//-----------------------------------------------------
 	firstItems.forEach(item => {
 		item.addEventListener('click', e => {
 			e.preventDefault()
 			firstItems.forEach(i => i.classList.remove('active'))
-			secondItems.forEach(i => i.classList.remove('active'))
-			thirdItems.forEach(i => i.classList.remove('active'))
-
 			item.classList.add('active')
 
-			secondCol.style.display = 'flex'
-			if (thirdCol) thirdCol.style.display = 'none'
+			const name = item.textContent.trim()
+			renderSecondColumn(name)
 		})
 	})
 
-	// клік по другій колонці
-	secondItems.forEach(item => {
-		item.addEventListener('click', e => {
-			e.preventDefault()
-			secondItems.forEach(i => i.classList.remove('active'))
-			thirdItems.forEach(i => i.classList.remove('active'))
-			item.classList.add('active')
+	//-----------------------------------------------------
+	// 📌 КЛІК ПО ДРУГІЙ КОЛОНЦІ (делегування)
+	//-----------------------------------------------------
+	secondCol.addEventListener('click', e => {
+		const target = e.target.closest('.catalog__menu-item[data-second]')
+		if (!target) return
 
-			if (thirdCol) thirdCol.style.display = 'flex'
-		})
+		e.preventDefault()
+
+		const secondName = target.dataset.second
+		const firstName = firstCol.querySelector('.active')?.textContent.trim()
+
+		if (!firstName) return
+
+		renderThirdColumn(firstName, secondName)
 	})
 
-	// клік по третій колонці
-	thirdItems?.forEach(item => {
-		item.addEventListener('click', e => {
-			e.preventDefault()
-			thirdItems.forEach(i => i.classList.remove('active'))
-			item.classList.add('active')
-			// четверта завжди показана — нічого не міняємо
-		})
-	})
+	//-----------------------------------------------------
+	// 📌 НАЗАД
+	//-----------------------------------------------------
+	catalog.addEventListener('click', e => {
+		const btn = e.target.closest('.catalog__menu-item--back')
+		if (!btn) return
 
-	// кнопки "назад"
-	const backButtons =
-		catalog.querySelectorAll('.catalog__menu-item--back') || []
-	backButtons.forEach(btn => {
-		btn.addEventListener('click', e => {
-			e.preventDefault()
-			const col = btn.closest('.catalog__menu-col')
-			if (!col) return
+		e.preventDefault()
 
-			if (col.classList.contains('third')) {
-				col.style.display = 'none'
-				secondCol.style.display = 'flex'
-				thirdItems.forEach(i => i.classList.remove('active'))
-			} else if (col.classList.contains('second')) {
-				secondItems.forEach(i => i.classList.remove('active'))
-				if (thirdCol) thirdCol.style.display = 'none'
-			}
-		})
+		const col = btn.closest('.catalog__menu-col')
+
+		if (col.classList.contains('third')) {
+			thirdCol.style.display = 'none'
+		}
+
+		if (col.classList.contains('second')) {
+			secondCol.style.display = 'none'
+			thirdCol.style.display = 'none'
+		}
 	})
 }
