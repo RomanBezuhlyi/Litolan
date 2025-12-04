@@ -1,0 +1,102 @@
+@use '../abstracts' as *;
+
+.contacts {
+	@include flex(row, center, flex-start, 8px);
+	align-items: stretch;
+	margin-bottom: 8px;
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+	&__left {
+		width: 50%;
+		@include flex(column, flex-start, flex-start, 20px);
+		padding: 32px;
+		flex: 1 0 0;
+		border-radius: 16px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $white;
+		@media (max-width: 991px) {
+			width: 100%;
+			padding: 12px;
+			gap: 8px;
+		}
+	}
+
+	.breadcrumbs {
+		margin: 0;
+	}
+
+	&__title {
+		color: $black;
+		@include text-style(36px, 500, 44px);
+		@media (max-width: 991px) {
+			@include text-style(24px, 500, 28px);
+		}
+	}
+
+	&__block {
+		@include flex(column, flex-start, flex-start, 20px);
+		padding: 20px;
+		align-self: stretch;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		background: $bg;
+		@media (max-width: 991px) {
+			gap: 12px;
+			padding: 12px;
+		}
+	}
+
+	&__block-title {
+		color: $black;
+		@include text-style(24px, 500, 28px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 24px);
+		}
+	}
+
+	&__block-list {
+		@include flex(column, flex-start, flex-start, 20px);
+		@media (max-width: 991px) {
+			gap: 12px;
+		}
+	}
+
+	&__block-item {
+		@include flex(row, flex-start, flex-start, 12px);
+		p {
+			@include flex(column, flex-start, flex-start, 12px);
+		}
+		p > span {
+			color: $black;
+			@include text-style(20px, 400, 24px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 400, 20px);
+			}
+		}
+		p > .small {
+			color: $black;
+			@include text-style(16px, 400, 20px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 20px);
+				&:not(:last-child) {
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+
+	&__right {
+		width: 50%;
+		border-radius: 16px;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			@include box(100%, 480px);
+		}
+	}
+
+	&__right-map {
+		@include box(100%);
+	}
+}
